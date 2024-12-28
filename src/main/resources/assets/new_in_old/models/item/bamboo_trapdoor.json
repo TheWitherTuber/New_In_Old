@@ -1,3 +1,3 @@
 {
-  "parent": "minecraft:block/bamboo_trapdoor_bottom"
+  "parent": "new_in_old:block/bamboo_trapdoor_bottom"
 }
