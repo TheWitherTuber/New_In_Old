@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/custom_fence_side_east",
   "textures": {
-    "texture": "minecraft:block/bamboo_fence"
+    "texture": "new_in_old:block/bamboo_fence"
   }
 }

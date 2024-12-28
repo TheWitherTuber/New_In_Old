@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/template_custom_fence_gate_open",
   "textures": {
-    "particle": "minecraft:block/bamboo_fence_gate_particle",
-    "texture": "minecraft:block/bamboo_fence_gate"
+    "particle": "new_in_old:block/bamboo_fence_gate_particle",
+    "texture": "new_in_old:block/bamboo_fence_gate"
   }
 }
