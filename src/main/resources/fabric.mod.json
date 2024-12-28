@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "new_in_old",
+  "version": "${version}",
+
+  "name": "New In Old",
+  "description": "Backports Blocks from 1.20 And 1.21.4 To 1.19.2",
+  "authors": [
+    "Wither"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/modid/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.wither.new_in_old.New_In_Old"
+    ],
+    "client": [
+      "net.wither.new_in_old.new_in_oldClient"
+    ]
+  },
+  "mixins": [
+    "new_in_old.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.19",
+    "fabric-api": "*",
+    "minecraft": "~1.19.2",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

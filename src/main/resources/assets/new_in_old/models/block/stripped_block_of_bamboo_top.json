@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "new_in_old:block/stripped_block_of_bamboo_top",
+    "side": "new_in_old:block/stripped_block_of_bamboo"
+  }
+}
