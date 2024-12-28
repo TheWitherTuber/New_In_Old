@@ -35,6 +35,8 @@ public class ModBlocks {
             new Block(FabricBlockSettings.of(Material.BAMBOO)), ItemGroup.BUILDING_BLOCKS);
     public static final Block BAMBOO_SLAB = registerBlock("bamboo_slab",
             new SlabBlock(FabricBlockSettings.of(Material.BAMBOO)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block BAMBOO_TRAPDOOR = registerBlock("bamboo_trapdoor",
+            new TrapdoorBlock(FabricBlockSettings.of(Material.BAMBOO)), ItemGroup.BUILDING_BLOCKS);
 
 
     private static Block registerBlock(String name, Block block, ItemGroup tab) {
