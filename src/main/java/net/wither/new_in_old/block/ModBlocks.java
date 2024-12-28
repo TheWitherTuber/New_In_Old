@@ -32,7 +32,7 @@ public class ModBlocks {
     public static final Block BAMBOO_MOSAIC_SLAB = registerBlock("bamboo_mosaic_slab",
             new SlabBlock(FabricBlockSettings.of(Material.BAMBOO)), ItemGroup.BUILDING_BLOCKS);
     public static final Block BAMBOO_PRESSSURE_PLATE = registerBlock("bamboo_pressure_plate",
-            new Block(FabricBlockSettings.of(Material.BAMBOO)), ItemGroup.BUILDING_BLOCKS);
+            new PressurePlateBlock(FabricBlockSettings.of(Material.BAMBOO)), ItemGroup.BUILDING_BLOCKS);
     public static final Block BAMBOO_SLAB = registerBlock("bamboo_slab",
             new SlabBlock(FabricBlockSettings.of(Material.BAMBOO)), ItemGroup.BUILDING_BLOCKS);
 
