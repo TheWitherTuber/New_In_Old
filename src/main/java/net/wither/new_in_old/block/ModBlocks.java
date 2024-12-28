@@ -22,7 +22,7 @@ public class ModBlocks {
     public static final Block BAMBOO_BUTTON = registerBlock("bamboo_button",
             new WoodenButtonBlock(FabricBlockSettings.of(Material.BAMBOO_SAPLING)), ItemGroup.BUILDING_BLOCKS);
     public static final Block BAMBOO_DOOR = registerBlock("bamboo_door",
-            new DoorBlock(FabricBlockSettings.of(Material.BAMBOO_SAPLING)), ItemGroup.BUILDING_BLOCKS);
+            new DoorBlock(FabricBlockSettings.of(Material.BAMBOO_SAPLING).nonOpaque()), ItemGroup.BUILDING_BLOCKS);
     public static final Block BAMBOO_FENCE = registerBlock("bamboo_fence",
             new FenceBlock(FabricBlockSettings.of(Material.BAMBOO_SAPLING)), ItemGroup.BUILDING_BLOCKS);
     public static final Block BAMBOO_FENCE_GATE = registerBlock("bamboo_fence_gate",

@@ -2,5 +2,7 @@
   "block.new_in_old.block_of_bamboo": "Bamboo Block",
   "block.new_in_old.stripped_block_of_bamboo": "Stripped Bamboo Block",
   "block.new_in_old.bamboo_planks": "Bamboo Planks",
-  "block.new_in_old.bamboo_trapdoor": "Bamboo Trapdoor"
+  "block.new_in_old.bamboo_trapdoor": "Bamboo Trapdoor",
+  "block.new_in_old.bamboo_button": "Bamboo Button",
+  "block.new_in_old.bamboo_door": "Bamboo Door"
 }
