@@ -1,5 +1,5 @@
 {
-  "parent": "new_in_old:block/fence_gate",
+  "parent": "new_in_old:block/template/template_custom_fence_gate",
   "textures": {
     "particle": "new_in_old:block/bamboo_fence_gate_particle",
     "texture": "new_in_old:block/bamboo_fence_gate"

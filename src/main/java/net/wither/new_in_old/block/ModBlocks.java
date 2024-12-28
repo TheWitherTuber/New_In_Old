@@ -31,8 +31,8 @@ public class ModBlocks {
             new Block(FabricBlockSettings.of(Material.BAMBOO_SAPLING)), ItemGroup.BUILDING_BLOCKS);
     public static final Block BAMBOO_MOSAIC_SLAB = registerBlock("bamboo_mosaic_slab",
             new SlabBlock(FabricBlockSettings.of(Material.BAMBOO_SAPLING)), ItemGroup.BUILDING_BLOCKS);
-    //public static final Block BAMBOO_MOSAIC_STAIR = registerBlock("bamboo_mosaic_stair",
-            //new ModStairs(ModBlocks.BLOCK_OF_BAMBOO.getDefaultState(), FabricBlockSettings.of(Material.BAMBOO_SAPLING)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block BAMBOO_MOSAIC_STAIR = registerBlock("bamboo_mosaic_stairs",
+            new StairsBlock(ModBlocks.BLOCK_OF_BAMBOO.getDefaultState(), FabricBlockSettings.of(Material.BAMBOO_SAPLING)), ItemGroup.BUILDING_BLOCKS);
     //public static final Block BAMBOO_PRESSSURE_PLATE = registerBlock("bamboo_pressure_plate",
             //new PressurePlateBlock(FabricBlockSettings.of(Material.BAMBOO)), ItemGroup.BUILDING_BLOCKS);
     public static final Block BAMBOO_SLAB = registerBlock("bamboo_slab",
