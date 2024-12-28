@@ -1,7 +1,7 @@
 {
-  "parent": "block/fence_gate",
+  "parent": "new_in_old:block/fence_gate",
   "textures": {
-    "particle": "block/bamboo_fence_gate_particle",
-    "texture": "block/bamboo_fence_gate"
+    "particle": "new_in_old:block/bamboo_fence_gate_particle",
+    "texture": "new_in_old:block/bamboo_fence_gate"
   }
 }
