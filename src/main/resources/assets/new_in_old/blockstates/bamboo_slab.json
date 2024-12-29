@@ -1,13 +1,13 @@
 {
   "variants": {
     "type=bottom": {
-      "model": "minecraft:block/bamboo_slab"
+      "model": "new_in_old:block/bamboo_slab"
     },
     "type=double": {
-      "model": "minecraft:block/bamboo_planks"
+      "model": "new_in_old:block/bamboo_planks"
     },
     "type=top": {
-      "model": "minecraft:block/bamboo_slab_top"
+      "model": "new_in_old:block/bamboo_slab_top"
     }
   }
 }
