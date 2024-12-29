@@ -32,7 +32,7 @@ public class ModBlocks {
             new Block(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.BAMBOO).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
     public static final Block BAMBOO_MOSAIC_SLAB = registerBlock("bamboo_mosaic_slab",
             new SlabBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.BAMBOO).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
-    public static final Block BAMBOO_MOSAIC_STAIR = registerBlock("bamboo_mosaic_stairs",
+    public static final Block BAMBOO_MOSAIC_STAIRS = registerBlock("bamboo_mosaic_stairs",
             new StairsBlock(ModBlocks.BAMBOO_MOSAIC.getDefaultState(), FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.BAMBOO).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
     //public static final Block BAMBOO_PRESSSURE_PLATE = registerBlock("bamboo_pressure_plate",
             //new PressurePlateBlock(FabricBlockSettings.of(Material.BAMBOO)), ItemGroup.BUILDING_BLOCKS);
@@ -40,6 +40,8 @@ public class ModBlocks {
             new SlabBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.BAMBOO).hardness(2).resistance(2)), ItemGroup.BUILDING_BLOCKS);
     public static final Block BAMBOO_TRAPDOOR = registerBlock("bamboo_trapdoor",
             new TrapdoorBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque().sounds(BlockSoundGroup.BAMBOO).hardness(3).resistance(3)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block BAMBOO_STAIRS = registerBlock("bamboo_stairs",
+            new StairsBlock(ModBlocks.BAMBOO_MOSAIC.getDefaultState(), FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.BAMBOO).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
 
 
 
