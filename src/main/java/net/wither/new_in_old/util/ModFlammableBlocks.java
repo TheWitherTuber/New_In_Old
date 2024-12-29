@@ -18,5 +18,7 @@ public class ModFlammableBlocks {
         registry.add(ModBlocks.BAMBOO_MOSAIC_STAIRS, 5, 5);
         registry.add(ModBlocks.BAMBOO_SLAB, 5, 5);
         registry.add(ModBlocks.BAMBOO_STAIRS, 5, 5);
+        registry.add(ModBlocks.BAMBOO_PLANKS, 5, 5);
+        registry.add(ModBlocks.BAMBOO_PRESSSURE_PLATE, 5, 5);
     }
 }

@@ -6,7 +6,6 @@ import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
-import net.minecraft.item.SignItem;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.SignType;
@@ -16,6 +15,7 @@ import net.minecraft.util.registry.Registry;
 
 
 public class ModBlocks {
+    //Bamboo Update//
     public static final Block BLOCK_OF_BAMBOO = registerBlock("block_of_bamboo",
             new PillarBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.BAMBOO).hardness(2).resistance(2)), ItemGroup.BUILDING_BLOCKS);
     public static final Block STRIPPED_BLOCK_OF_BAMBOO = registerBlock("stripped_block_of_bamboo",
@@ -48,6 +48,11 @@ public class ModBlocks {
     public static final Block BAMBOO_SIGN = registerBlock("bamboo_sign",
             new SignBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque().noCollision().sounds(BlockSoundGroup.BAMBOO).hardness(1).resistance(1), SignType.OAK), ItemGroup.BUILDING_BLOCKS);
 
+    //Cherry Update//
+
+    //Trial Update//
+
+    //Pale Update//
 
 
 
