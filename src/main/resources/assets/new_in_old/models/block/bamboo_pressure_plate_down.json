@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/pressure_plate_down",
   "textures": {
-    "texture": "minecraft:block/bamboo_planks"
+    "texture": "new_in_old:block/bamboo_planks"
   }
 }

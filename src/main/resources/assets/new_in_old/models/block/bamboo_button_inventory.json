@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:block/button_inventory",
+  "parent": "new_in_old:block/button_inventory",
   "textures": {
     "texture": "new_in_old:block/bamboo_planks"
   }

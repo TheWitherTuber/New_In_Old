@@ -6,5 +6,11 @@
   "block.new_in_old.bamboo_button": "Bamboo Button",
   "block.new_in_old.bamboo_door": "Bamboo Door",
   "block.new_in_old.bamboo_mosaic": "Mosaic Bamboo ",
-  "block.new_in_old.bamboo_mosaic_slab": "Mosaic Bamboo Slab"
+  "block.new_in_old.bamboo_mosaic_slab": "Mosaic Bamboo Slab",
+  "block.new_in_old.bamboo_mosaic_stairs": "Mosaic Bamboo Stairs",
+  "block.new_in_old.bamboo_stairs": "Bamboo Stairs",
+  "block.new_in_old.bamboo_slab": "Bamboo Slab",
+  "block.new_in_old.bamboo_fence": "Bamboo Fence",
+  "block.new_in_old.bamboo_fence_gate": "Bamboo Fence Gate",
+  "block.new_in_old.bamboo_pressure_plate": "Bamboo Pressure Plate"
 }

@@ -1,5 +1,5 @@
 {
   "textures": {
-    "particle": "minecraft:block/bamboo_planks"
+    "particle": "new_in_old:block/bamboo_planks"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "minecraft:item/bamboo_door"
+    "layer0": "new_in_old:item/bamboo_door"
   }
 }
