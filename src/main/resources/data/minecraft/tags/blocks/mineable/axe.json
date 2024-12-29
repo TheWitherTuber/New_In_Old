@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "new_in_old:bamboo_planks",
+    "new_in_old:block_of_bamboo",
+    "new_in_old:stripped_block_of_bamboo",
+    "new_in_old:bamboo_slab",
+    "new_in_old:bamboo_mosaic",
+    "new_in_old:bamboo_mosaic_slab",
+    "new_in_old:bamboo_door",
+    "new_in_old:bamboo_fence",
+    "new_in_old:bamboo_fence_gate",
+    "new_in_old:bamboo_stairs",
+    "new_in_old:bamboo_mosaic_stairs"
+  ]
+}

@@ -15,7 +15,7 @@ import net.minecraft.util.registry.Registry;
 
 public class ModBlocks {
     public static final Block BLOCK_OF_BAMBOO = registerBlock("block_of_bamboo",
-            new PillarBlock(FabricBlockSettings.of(Material.BAMBOO_SAPLING).sounds(BlockSoundGroup.BAMBOO).hardness(2)), ItemGroup.BUILDING_BLOCKS);
+            new PillarBlock(FabricBlockSettings.of(Material.BAMBOO_SAPLING).sounds(BlockSoundGroup.BAMBOO).hardness(2).resistance(2)), ItemGroup.BUILDING_BLOCKS);
     public static final Block STRIPPED_BLOCK_OF_BAMBOO = registerBlock("stripped_block_of_bamboo",
             new PillarBlock(FabricBlockSettings.of(Material.BAMBOO_SAPLING).sounds(BlockSoundGroup.BAMBOO)), ItemGroup.BUILDING_BLOCKS);
     public static final Block BAMBOO_PLANKS = registerBlock("bamboo_planks",
