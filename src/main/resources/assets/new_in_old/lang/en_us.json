@@ -12,5 +12,8 @@
   "block.new_in_old.bamboo_slab": "Bamboo Slab",
   "block.new_in_old.bamboo_fence": "Bamboo Fence",
   "block.new_in_old.bamboo_fence_gate": "Bamboo Fence Gate",
-  "block.new_in_old.bamboo_pressure_plate": "Bamboo Pressure Plate"
+  "block.new_in_old.bamboo_pressure_plate": "Bamboo Pressure Plate",
+  "block.new_in_old.bamboo_wall_sign": "Bamboo Wall Sign",
+  "block.new_in_old.standing_bamboo_sign": "Bamboo Sign",
+  "item.new_in_old.bamboo_sign": "Bamboo Sign"
 }

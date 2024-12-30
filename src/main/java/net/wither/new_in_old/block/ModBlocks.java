@@ -1,14 +1,17 @@
 package net.wither.new_in_old.block;
 
+import com.terraformersmc.terraform.sign.block.TerraformSignBlock;
+import com.terraformersmc.terraform.sign.block.TerraformWallSignBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
+import net.minecraft.data.family.BlockFamilies;
+import net.minecraft.data.family.BlockFamily;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.SignType;
 import net.wither.new_in_old.New_In_Old;
 import net.minecraft.util.registry.Registry;
 
@@ -44,9 +47,17 @@ public class ModBlocks {
             new TrapdoorBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque().sounds(BlockSoundGroup.BAMBOO).hardness(3).resistance(3)), ItemGroup.BUILDING_BLOCKS);
     public static final Block BAMBOO_STAIRS = registerBlock("bamboo_stairs",
             new StairsBlock(ModBlocks.BAMBOO_MOSAIC.getDefaultState(), FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.BAMBOO).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
-    private static AbstractBlock.Settings settings;
-    public static final Block BAMBOO_SIGN = registerBlock("bamboo_sign",
-            new SignBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque().noCollision().sounds(BlockSoundGroup.BAMBOO).hardness(1).resistance(1), SignType.OAK), ItemGroup.BUILDING_BLOCKS);
+
+    public static final Identifier BAMBOO_SIGN_TEXTURE = new Identifier(New_In_Old.MOD_ID, "entity/signs/bamboo");
+
+    public static final Block STANDING_BAMBOO_SIGN = registerBlock("standing_bamboo_sign",
+            new TerraformSignBlock(BAMBOO_SIGN_TEXTURE, FabricBlockSettings.copyOf(Blocks.OAK_SIGN).hardness(0.5f).resistance(0.5f).noCollision()), ItemGroup.BUILDING_BLOCKS);
+    public static final Block WALL_BAMBOO_SIGN = registerBlock("wall_bamboo_sign",
+            new TerraformWallSignBlock(BAMBOO_SIGN_TEXTURE, FabricBlockSettings.copyOf(Blocks.OAK_WALL_SIGN).hardness(0.5f).resistance(0.5f).noCollision()));
+
+    public static final BlockFamily BAMBOO_FAMILY = BlockFamilies.register(ModBlocks.BAMBOO_PLANKS)
+            .sign(ModBlocks.STANDING_BAMBOO_SIGN, ModBlocks.WALL_BAMBOO_SIGN)
+            .group("wooden").unlockCriterionName("has_planks").build();
 
     //Cherry Update//
 
@@ -59,6 +70,16 @@ public class ModBlocks {
     private static Block registerBlock(String name, Block block, ItemGroup tab) {
         registerBlockItem(name, block, tab);
         return Registry.register(Registry.BLOCK, new Identifier(New_In_Old.MOD_ID, name), block);
+    }
+    private static Block registerBlock(String name, Block block) {
+        registerBlockItem(name, block);
+        return Registry.register(Registry.BLOCK, new Identifier(New_In_Old.MOD_ID, name), block);
+    }
+
+    private static Item registerBlockItem(String name, Block block) {
+        Registry.register(Registry.ITEM, new Identifier(New_In_Old.MOD_ID, name),
+                new BlockItem(block, new FabricItemSettings()));
+        return null;
     }
 
 
