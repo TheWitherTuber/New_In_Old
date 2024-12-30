@@ -11,6 +11,17 @@
     "new_in_old:bamboo_mosaic_stairs",
     "new_in_old:bamboo_mosaic_slab",
     "new_in_old:bamboo_fence",
-    "new_in_old:bamboo_fence_gate"
+    "new_in_old:bamboo_fence_gate",
+    "new_in_old:cherry_log",
+    "new_in_old:stripped_cherry_log",
+    "new_in_old:cherry_planks",
+    "new_in_old:cherry_stairs",
+    "new_in_old:cherry_slab",
+    "new_in_old:cherry_door",
+    "new_in_old:cherry_button",
+    "new_in_old:cherry_wood",
+    "new_in_old:stripped_cherry_wood",
+    "new_in_old:cherry_fence",
+    "new_in_old:cherry_fence_gate"
   ]
 }

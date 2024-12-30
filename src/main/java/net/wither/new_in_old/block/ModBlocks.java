@@ -60,6 +60,45 @@ public class ModBlocks {
             .group("wooden").unlockCriterionName("has_planks").build();
 
     //Cherry Update//
+    public static final Block CHERRY_BUTTON = registerBlock("cherry_button",
+            new WoodenButtonBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(0.5f).resistance(0.5f).noCollision()), ItemGroup.BUILDING_BLOCKS);
+    public static final Block CHERRY_PLANKS = registerBlock("cherry_planks",
+            new Block(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block CHERRY_WOOD = registerBlock("cherry_wood",
+            new PillarBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(2)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block CHERRY_LOG = registerBlock("cherry_log",
+            new PillarBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(2)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block STRIPPED_CHERRY_LOG = registerBlock("stripped_cherry_log",
+            new PillarBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(2)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block STRIPPED_CHERRY_WOOD = registerBlock("stripped_cherry_wood",
+            new PillarBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(2)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block CHERRY_DOOR = registerBlock("cherry_door",
+            new DoorBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque().sounds(BlockSoundGroup.WOOD).hardness(3).resistance(3)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block CHERRY_FENCE = registerBlock("cherry_fence",
+            new FenceBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block CHERRY_FENCE_GATE = registerBlock("cherry_fence_gate",
+            new FenceGateBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block CHERRY_PRESSSURE_PLATE = registerBlock("cherry_pressure_plate",
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING , FabricBlockSettings.of(Material.BAMBOO).noCollision().sounds(BlockSoundGroup.BAMBOO).hardness(0.5f).resistance(0.5f)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block CHERRY_SLAB = registerBlock("cherry_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(2)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block CHERRY_TRAPDOOR = registerBlock("cherry_trapdoor",
+            new TrapdoorBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque().sounds(BlockSoundGroup.WOOD).hardness(3).resistance(3)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block CHERRY_STAIRS = registerBlock("cherry_stairs",
+            new StairsBlock(ModBlocks.BAMBOO_MOSAIC.getDefaultState(), FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.BAMBOO).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block CHERRY_LEAVES = registerBlock("cherry_leaves",
+            new LeavesBlock(FabricBlockSettings.of(Material.LEAVES).sounds(BlockSoundGroup.AZALEA_LEAVES).nonOpaque().resistance(0.1f).hardness((0.1f))), ItemGroup.BUILDING_BLOCKS);
+
+    public static final Identifier CHERRY_SIGN_TEXTURE = new Identifier(New_In_Old.MOD_ID, "entity/signs/cherry");
+
+    public static final Block STANDING_CHERRY_SIGN = registerBlock("standing_cherry_sign",
+            new TerraformSignBlock(CHERRY_SIGN_TEXTURE, FabricBlockSettings.copyOf(Blocks.OAK_SIGN).hardness(0.5f).resistance(0.5f).noCollision()), ItemGroup.BUILDING_BLOCKS);
+    public static final Block WALL_CHERRY_SIGN = registerBlock("wall_cherry_sign",
+            new TerraformWallSignBlock(CHERRY_SIGN_TEXTURE, FabricBlockSettings.copyOf(Blocks.OAK_WALL_SIGN).hardness(0.5f).resistance(0.5f).noCollision()));
+
+    public static final BlockFamily CHERRY_FAMILY = BlockFamilies.register(ModBlocks.CHERRY_PLANKS)
+            .sign(ModBlocks.STANDING_CHERRY_SIGN, ModBlocks.WALL_CHERRY_SIGN)
+            .group("wooden").unlockCriterionName("has_planks").build();
 
     //Trial Update//
 

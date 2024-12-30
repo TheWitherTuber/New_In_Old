@@ -16,7 +16,10 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         BlockStateModelGenerator.BlockTexturePool bamboo_pool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BAMBOO_PLANKS);
         bamboo_pool.family(ModBlocks.BAMBOO_FAMILY);
+        BlockStateModelGenerator.BlockTexturePool cherry_pool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CHERRY_PLANKS);
+        cherry_pool.family(ModBlocks.CHERRY_FAMILY);
     }
+
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {

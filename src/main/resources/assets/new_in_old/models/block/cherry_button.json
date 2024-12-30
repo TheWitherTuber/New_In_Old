@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "new_in_old:block/cherry_planks"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "new_in_old:block/stripped_cherry_log_top",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "new_in_old:block/stripped_cherry_log"
+    },
+    "axis=z": {
+      "model": "new_in_old:block/stripped_cherry_log_top",
+      "x": 90
+    }
+  }
+}

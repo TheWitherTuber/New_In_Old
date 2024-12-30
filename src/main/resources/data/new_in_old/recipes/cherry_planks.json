@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "new_in_old:stripped_block_of_bamboo"
+      "tag": "new_in_old:cherry_logs"
     }
   ],
   "result": {
