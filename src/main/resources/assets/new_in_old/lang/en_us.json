@@ -33,6 +33,7 @@
   "block.new_in_old.cherry_wall_sign": "Cherry Wall Sign",
   "block.new_in_old.standing_cherry_sign": "Cherry Sign",
   "item.new_in_old.cherry_sign": "Cherry Sign",
+  "block.new_in_old.cherry_lantern": "Cherry Lantern",
 
   "block.new_in_old.pale_oak_log": "Pale Oak Log",
   "block.new_in_old.stripped_pale_oak_log": "Stripped Pale Oak Log",
@@ -56,5 +57,7 @@
   "block.new_in_old.potted_open_eyeblossom": "Potted Open Eyeblossom",
   "block.new_in_old.open_eyeblossom": "Open Eyeblossom",
   "block.new_in_old.potted_closed_eyeblossom": "Potted Closed Eyeblossom",
-  "block.new_in_old.closed_eyeblossom": "Closed Eyeblossom"
+  "block.new_in_old.active_creaking_heart": "Active Creaking heart",
+  "block.new_in_old.creaking_heart": "Creaking heart",
+  "block.new_in_old.pale_lantern": "Pale Lantern"
 }

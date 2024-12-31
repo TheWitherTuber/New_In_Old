@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "new_in_old:pale_oak_log"
+    },
+    "D": {
+      "item": "minecraft:orange_dye"
+    }
+  },
+  "pattern": [
+    "#",
+    "D",
+    "#"
+  ],
+  "result": {
+    "item": "new_in_old:creaking_heart"
+  }
+}

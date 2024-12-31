@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "C": {
+      "item": "new_in_old:cherry_fence"
+    },
+    "W": {
+      "item": "new_in_old:cherry_planks"
+    },
+    "T": {
+      "item": "minecraft:torch"
+    }
+  },
+  "pattern": [
+    " C ",
+    "WWW",
+    "WTW"
+  ],
+  "result": {
+    "item": "new_in_old:cherry_lantern"
+  }
+}

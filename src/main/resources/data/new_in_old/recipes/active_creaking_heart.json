@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "new_in_old:creaking_heart"
+    },
+    "D": {
+      "item": "minecraft:orange_dye"
+    }
+  },
+  "pattern": [
+    "D",
+    "#"
+  ],
+  "result": {
+    "item": "new_in_old:active_creaking_heart"
+  }
+}
