@@ -2,6 +2,7 @@
   "values": [
     "new_in_old:bamboo_fence",
     "new_in_old:cherry_fence",
-    "new_in_old:pale_oak_fence"
+    "new_in_old:pale_oak_fence",
+    "minecraft:nether_brick_fence"
   ]
 }
