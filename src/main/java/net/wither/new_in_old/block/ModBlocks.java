@@ -141,7 +141,7 @@ public class ModBlocks {
     public static final Block PALE_MOSS_BLOCK = registerBlock("pale_moss_block",
             new MossBlock(FabricBlockSettings.of(Material.MOSS_BLOCK).sounds(BlockSoundGroup.MOSS_BLOCK).nonOpaque().resistance(0.1f).hardness((0.1f))), ItemGroup.BUILDING_BLOCKS);
     public static final Block OPEN_EYEBLOSSOM = registerBlock("open_eyeblossom",
-            new FlowerBlock(StatusEffects.BLINDNESS, 5, FabricBlockSettings.of(Material.MOSS_BLOCK).sounds(BlockSoundGroup.CROP).noCollision().luminance(2)), ItemGroup.BUILDING_BLOCKS);
+            new FlowerBlock(StatusEffects.BLINDNESS, 5, FabricBlockSettings.of(Material.MOSS_BLOCK).sounds(BlockSoundGroup.CROP).noCollision().luminance(5)), ItemGroup.BUILDING_BLOCKS);
     public static final Block CLOSED_EYEBLOSSOM = registerBlock("closed_eyeblossom",
             new FlowerBlock(StatusEffects.NAUSEA, 5, FabricBlockSettings.of(Material.MOSS_BLOCK).sounds(BlockSoundGroup.CROP).noCollision()), ItemGroup.BUILDING_BLOCKS);
     public static final Block POTTED_OPEN_EYEBLOSSOM = registerBlock("potted_open_eyeblossom",
@@ -152,6 +152,8 @@ public class ModBlocks {
             new PillarBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
     public static final Block ACTIVE_CREAKING_HEART = registerBlock("active_creaking_heart",
             new PillarBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block PALE_LANTERN = registerBlock("pale_lantern",
+            new LanternBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3).luminance(15).nonOpaque()), ItemGroup.BUILDING_BLOCKS);
 
     public static final Identifier PALE_OAK_SIGN_TEXTURE = new Identifier(New_In_Old.MOD_ID, "entity/signs/pale_oak");
 
