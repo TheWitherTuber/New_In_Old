@@ -56,8 +56,10 @@
   "item.new_in_old.pale_oak_sign": "Pale Oak Sign",
   "block.new_in_old.potted_open_eyeblossom": "Potted Open Eyeblossom",
   "block.new_in_old.open_eyeblossom": "Open Eyeblossom",
+  "block.new_in_old.closed_eyeblossom": "Closed Eyeblossom",
   "block.new_in_old.potted_closed_eyeblossom": "Potted Closed Eyeblossom",
   "block.new_in_old.active_creaking_heart": "Active Creaking heart",
   "block.new_in_old.creaking_heart": "Creaking heart",
-  "block.new_in_old.pale_lantern": "Pale Lantern"
+  "block.new_in_old.pale_lantern": "Pale Lantern",
+  "block.new_in_old.pale_oak_sign": "Pale Oak Sign"
 }

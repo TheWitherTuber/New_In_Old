@@ -153,7 +153,7 @@ public class ModBlocks {
     public static final Block CREAKING_HEART = registerBlock("creaking_heart",
             new PillarBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
     public static final Block ACTIVE_CREAKING_HEART = registerBlock("active_creaking_heart",
-            new PillarBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
+            new PillarBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3).luminance(5)), ItemGroup.BUILDING_BLOCKS);
     public static final Block PALE_LANTERN = registerBlock("pale_lantern",
             new LanternBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3).luminance(15).nonOpaque()), ItemGroup.BUILDING_BLOCKS);
 

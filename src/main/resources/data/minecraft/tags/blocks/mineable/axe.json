@@ -43,7 +43,10 @@
     "new_in_old:standing_pale_oak_sign",
     "new_in_old:pale_oak_pressure_plate",
     "new_in_old:creaking_heart",
-    "new_in_old:active_creaking_heart"
+    "new_in_old:active_creaking_heart",
+    "new_in_old:cherry_lantern",
+    "new_in_old:pale_lantern"
+
 
   ]
 }
