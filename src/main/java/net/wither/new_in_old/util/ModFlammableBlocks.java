@@ -34,5 +34,21 @@ public class ModFlammableBlocks {
         registry.add(ModBlocks.CHERRY_PLANKS, 5, 5);
         registry.add(ModBlocks.CHERRY_PRESSSURE_PLATE, 5, 5);
         registry.add(ModBlocks.CHERRY_LEAVES, 5, 5);
+        registry.add(ModBlocks.PALE_OAK_LOG, 5, 5);
+        registry.add(ModBlocks.STRIPPED_PALE_OAK_LOG, 5, 5);
+        registry.add(ModBlocks.PALE_OAK_TRAPDOOR, 5, 5);
+        registry.add(ModBlocks.PALE_OAK_BUTTON, 5, 5);
+        registry.add(ModBlocks.PALE_OAK_DOOR, 5, 5);
+        registry.add(ModBlocks.PALE_OAK_FENCE, 5, 5);
+        registry.add(ModBlocks.PALE_OAK_FENCE_GATE, 5, 5);
+        registry.add(ModBlocks.PALE_OAK_WOOD, 5, 5);
+        registry.add(ModBlocks.STRIPPED_PALE_OAK_WOOD, 5, 5);
+        registry.add(ModBlocks.PALE_OAK_SLAB, 5, 5);
+        registry.add(ModBlocks.PALE_OAK_STAIRS, 5, 5);
+        registry.add(ModBlocks.PALE_OAK_PLANKS, 5, 5);
+        registry.add(ModBlocks.PALE_OAK_PRESSSURE_PLATE, 5, 5);
+        registry.add(ModBlocks.PALE_OAK_LEAVES, 5, 5);
+        registry.add(ModBlocks.CREAKING_HEART, 5, 5);
+        registry.add(ModBlocks.ACTIVE_CREAKING_HEART, 5, 5);
     }
 }

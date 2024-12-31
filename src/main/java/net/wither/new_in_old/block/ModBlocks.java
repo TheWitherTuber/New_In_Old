@@ -2,18 +2,23 @@ package net.wither.new_in_old.block;
 
 import com.terraformersmc.terraform.sign.block.TerraformSignBlock;
 import com.terraformersmc.terraform.sign.block.TerraformWallSignBlock;
+import jdk.jshell.Snippet;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.data.family.BlockFamilies;
 import net.minecraft.data.family.BlockFamily;
+import net.minecraft.entity.effect.StatusEffect;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.potion.Potion;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.wither.new_in_old.New_In_Old;
 import net.minecraft.util.registry.Registry;
+
 
 
 
@@ -87,7 +92,7 @@ public class ModBlocks {
     public static final Block CHERRY_STAIRS = registerBlock("cherry_stairs",
             new StairsBlock(ModBlocks.CHERRY_PLANKS.getDefaultState(), FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
     public static final Block CHERRY_LEAVES = registerBlock("cherry_leaves",
-            new LeavesBlock(FabricBlockSettings.of(Material.LEAVES).sounds(BlockSoundGroup.AZALEA_LEAVES).nonOpaque().resistance(0.1f).hardness((0.1f))), ItemGroup.BUILDING_BLOCKS);
+            new LeavesBlock(FabricBlockSettings.of(Material.LEAVES).sounds(BlockSoundGroup.AZALEA_LEAVES).nonOpaque().resistance(0.2f).hardness((0.2f))), ItemGroup.BUILDING_BLOCKS);
 
     public static final Identifier CHERRY_SIGN_TEXTURE = new Identifier(New_In_Old.MOD_ID, "entity/signs/cherry");
 
@@ -106,7 +111,7 @@ public class ModBlocks {
     public static final Block PALE_OAK_PLANKS = registerBlock("pale_oak_planks",
             new Block(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
     public static final Block PALE_OAK_PRESSSURE_PLATE = registerBlock("pale_oak_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING , FabricBlockSettings.of(Material.WOOD).noCollision().sounds(BlockSoundGroup.BAMBOO).hardness(0.5f).resistance(0.5f)), ItemGroup.BUILDING_BLOCKS);
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING , FabricBlockSettings.of(Material.WOOD).noCollision().sounds(BlockSoundGroup.WOOD).hardness(0.5f).resistance(0.5f)), ItemGroup.BUILDING_BLOCKS);
     public static final Block PALE_OAK_BUTTON = registerBlock("pale_oak_button",
             new WoodenButtonBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(0.5f).resistance(0.5f).noCollision()), ItemGroup.BUILDING_BLOCKS);
     public static final Block PALE_OAK_WOOD = registerBlock("pale_oak_wood",
@@ -130,11 +135,23 @@ public class ModBlocks {
     public static final Block PALE_OAK_STAIRS = registerBlock("pale_oak_stairs",
             new StairsBlock(ModBlocks.PALE_OAK_PLANKS.getDefaultState(), FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
     public static final Block PALE_OAK_LEAVES = registerBlock("pale_oak_leaves",
-            new LeavesBlock(FabricBlockSettings.of(Material.LEAVES).sounds(BlockSoundGroup.AZALEA_LEAVES).nonOpaque().resistance(0.1f).hardness((0.1f))), ItemGroup.BUILDING_BLOCKS);
+            new LeavesBlock(FabricBlockSettings.of(Material.LEAVES).sounds(BlockSoundGroup.AZALEA_LEAVES).nonOpaque().resistance(0.2f).hardness((0.2f))), ItemGroup.BUILDING_BLOCKS);
     public static final Block PALE_MOSS_CARPET = registerBlock("pale_moss_carpet",
             new CarpetBlock(FabricBlockSettings.of(Material.MOSS_BLOCK).sounds(BlockSoundGroup.MOSS_CARPET).nonOpaque().resistance(0.1f).hardness((0.1f))), ItemGroup.BUILDING_BLOCKS);
     public static final Block PALE_MOSS_BLOCK = registerBlock("pale_moss_block",
             new MossBlock(FabricBlockSettings.of(Material.MOSS_BLOCK).sounds(BlockSoundGroup.MOSS_BLOCK).nonOpaque().resistance(0.1f).hardness((0.1f))), ItemGroup.BUILDING_BLOCKS);
+    public static final Block OPEN_EYEBLOSSOM = registerBlock("open_eyeblossom",
+            new FlowerBlock(StatusEffects.BLINDNESS, 5, FabricBlockSettings.of(Material.MOSS_BLOCK).sounds(BlockSoundGroup.CROP).noCollision().luminance(2)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block CLOSED_EYEBLOSSOM = registerBlock("closed_eyeblossom",
+            new FlowerBlock(StatusEffects.NAUSEA, 5, FabricBlockSettings.of(Material.MOSS_BLOCK).sounds(BlockSoundGroup.CROP).noCollision()), ItemGroup.BUILDING_BLOCKS);
+    public static final Block POTTED_OPEN_EYEBLOSSOM = registerBlock("potted_open_eyeblossom",
+            new FlowerPotBlock(ModBlocks.OPEN_EYEBLOSSOM, FabricBlockSettings.copy(Blocks.POTTED_DANDELION)));
+    public static final Block POTTED_CLOSED_EYEBLOSSOM = registerBlock("potted_closed_eyeblossom",
+            new FlowerPotBlock(ModBlocks.CLOSED_EYEBLOSSOM, FabricBlockSettings.copy(Blocks.POTTED_DANDELION)));
+    public static final Block CREAKING_HEART = registerBlock("creaking_heart",
+            new PillarBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block ACTIVE_CREAKING_HEART = registerBlock("active_creaking_heart",
+            new PillarBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
 
     public static final Identifier PALE_OAK_SIGN_TEXTURE = new Identifier(New_In_Old.MOD_ID, "entity/signs/pale_oak");
 

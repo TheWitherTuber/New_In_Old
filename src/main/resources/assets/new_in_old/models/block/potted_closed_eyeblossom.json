@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/flower_pot_cross",
+  "textures": {
+    "plant": "new_in_old:block/closed_eyeblossom"
+  }
+}

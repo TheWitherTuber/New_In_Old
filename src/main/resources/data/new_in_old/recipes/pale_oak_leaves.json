@@ -2,16 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "item": "minecraft:birch_log"
+      "item": "minecraft:oak_leaves"
     },
     "D": {
-      "item": "minecraft:pink_dye"
+      "item": "minecraft:bone"
     }
   },
   "pattern": [
     "#D"
   ],
   "result": {
-    "item": "new_in_old:cherry_log"
+    "item": "new_in_old:pale_oak_leaves"
   }
 }

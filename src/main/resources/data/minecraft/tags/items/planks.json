@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "new_in_old:bamboo_planks"
+    "new_in_old:bamboo_planks",
+    "new_in_old:cherry_planks",
+    "new_in_old:pale_oak_planks"
+
   ]
 }

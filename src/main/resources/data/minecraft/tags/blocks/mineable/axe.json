@@ -22,6 +22,28 @@
     "new_in_old:cherry_wood",
     "new_in_old:stripped_cherry_wood",
     "new_in_old:cherry_fence",
-    "new_in_old:cherry_fence_gate"
+    "new_in_old:cherry_fence_gate",
+    "new_in_old:stripped_cherry_wood",
+    "new_in_old:wall_cherry_sign",
+    "new_in_old:standing_cherry_sign",
+    "new_in_old:cherry_pressure_plate",
+    "new_in_old:pale_oak_log",
+    "new_in_old:stripped_pale_oak_log",
+    "new_in_old:pale_oak_planks",
+    "new_in_old:pale_oak_stairs",
+    "new_in_old:pale_oak_slab",
+    "new_in_old:pale_oak_door",
+    "new_in_old:pale_oak_button",
+    "new_in_old:pale_oak_wood",
+    "new_in_old:stripped_pale_oak_wood",
+    "new_in_old:pale_oak_fence",
+    "new_in_old:pale_oak_fence_gate",
+    "new_in_old:stripped_pale_oak_wood",
+    "new_in_old:wall_pale_oak_sign",
+    "new_in_old:standing_pale_oak_sign",
+    "new_in_old:pale_oak_pressure_plate",
+    "new_in_old:creaking_heart",
+    "new_in_old:active_creaking_heart"
+
   ]
 }

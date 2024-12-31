@@ -52,6 +52,9 @@
   "block.new_in_old.pale_moss_block": "Pale Moss Block",
   "block.new_in_old.pale_oak_wall_sign": "Pale Oak Wall Sign",
   "block.new_in_old.standing_pale_oak_sign": "Pale Oak Sign",
-  "item.new_in_old.pale_oak_sign": "Pale Oak Sign"
-
+  "item.new_in_old.pale_oak_sign": "Pale Oak Sign",
+  "block.new_in_old.potted_open_eyeblossom": "Potted Open Eyeblossom",
+  "block.new_in_old.open_eyeblossom": "Open Eyeblossom",
+  "block.new_in_old.potted_closed_eyeblossom": "Potted Closed Eyeblossom",
+  "block.new_in_old.closed_eyeblossom": "Closed Eyeblossom"
 }
