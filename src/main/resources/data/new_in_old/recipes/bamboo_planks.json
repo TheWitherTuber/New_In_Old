@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "tag": "new_in_old:bamboo_logs"
+      "item": "new_in_old:block_of_bamboo"
     }
   ],
   "result": {

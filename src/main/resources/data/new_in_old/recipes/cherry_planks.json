@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "tag": "new_in_old:cherry_logs"
+      "item": "new_in_old:cherry_log"
     }
   ],
   "result": {
-    "item": "new_in_old:bamboo_planks",
-    "count": 2
+    "item": "new_in_old:cherry_planks",
+    "count": 4
   }
 }

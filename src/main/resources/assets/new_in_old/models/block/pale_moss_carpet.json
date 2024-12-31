@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/carpet",
+  "textures": {
+    "wool": "new_in_old:block/pale_moss_block"
+  }
+}

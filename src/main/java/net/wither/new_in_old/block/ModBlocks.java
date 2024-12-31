@@ -79,13 +79,13 @@ public class ModBlocks {
     public static final Block CHERRY_FENCE_GATE = registerBlock("cherry_fence_gate",
             new FenceGateBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
     public static final Block CHERRY_PRESSSURE_PLATE = registerBlock("cherry_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING , FabricBlockSettings.of(Material.BAMBOO).noCollision().sounds(BlockSoundGroup.BAMBOO).hardness(0.5f).resistance(0.5f)), ItemGroup.BUILDING_BLOCKS);
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING , FabricBlockSettings.of(Material.WOOD).noCollision().sounds(BlockSoundGroup.WOOD).hardness(0.5f).resistance(0.5f)), ItemGroup.BUILDING_BLOCKS);
     public static final Block CHERRY_SLAB = registerBlock("cherry_slab",
             new SlabBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(2)), ItemGroup.BUILDING_BLOCKS);
     public static final Block CHERRY_TRAPDOOR = registerBlock("cherry_trapdoor",
             new TrapdoorBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque().sounds(BlockSoundGroup.WOOD).hardness(3).resistance(3)), ItemGroup.BUILDING_BLOCKS);
     public static final Block CHERRY_STAIRS = registerBlock("cherry_stairs",
-            new StairsBlock(ModBlocks.BAMBOO_MOSAIC.getDefaultState(), FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.BAMBOO).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
+            new StairsBlock(ModBlocks.CHERRY_PLANKS.getDefaultState(), FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
     public static final Block CHERRY_LEAVES = registerBlock("cherry_leaves",
             new LeavesBlock(FabricBlockSettings.of(Material.LEAVES).sounds(BlockSoundGroup.AZALEA_LEAVES).nonOpaque().resistance(0.1f).hardness((0.1f))), ItemGroup.BUILDING_BLOCKS);
 
@@ -103,7 +103,50 @@ public class ModBlocks {
     //Trial Update//
 
     //Pale Update//
+    public static final Block PALE_OAK_PLANKS = registerBlock("pale_oak_planks",
+            new Block(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block PALE_OAK_PRESSSURE_PLATE = registerBlock("pale_oak_pressure_plate",
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING , FabricBlockSettings.of(Material.WOOD).noCollision().sounds(BlockSoundGroup.BAMBOO).hardness(0.5f).resistance(0.5f)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block PALE_OAK_BUTTON = registerBlock("pale_oak_button",
+            new WoodenButtonBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(0.5f).resistance(0.5f).noCollision()), ItemGroup.BUILDING_BLOCKS);
+    public static final Block PALE_OAK_WOOD = registerBlock("pale_oak_wood",
+            new PillarBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(2)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block PALE_OAK_LOG = registerBlock("pale_oak_log",
+            new PillarBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(2)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block STRIPPED_PALE_OAK_LOG = registerBlock("stripped_pale_oak_log",
+            new PillarBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(2)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block STRIPPED_PALE_OAK_WOOD = registerBlock("stripped_pale_oak_wood",
+            new PillarBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(2)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block PALE_OAK_DOOR = registerBlock("pale_oak_door",
+            new DoorBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque().sounds(BlockSoundGroup.WOOD).hardness(3).resistance(3)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block PALE_OAK_FENCE = registerBlock("pale_oak_fence",
+            new FenceBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block PALE_OAK_FENCE_GATE = registerBlock("pale_oak_fence_gate",
+            new FenceGateBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block PALE_OAK_SLAB = registerBlock("pale_oak_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(2)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block PALE_OAK_TRAPDOOR = registerBlock("pale_oak_trapdoor",
+            new TrapdoorBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque().sounds(BlockSoundGroup.WOOD).hardness(3).resistance(3)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block PALE_OAK_STAIRS = registerBlock("pale_oak_stairs",
+            new StairsBlock(ModBlocks.PALE_OAK_PLANKS.getDefaultState(), FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block PALE_OAK_LEAVES = registerBlock("pale_oak_leaves",
+            new LeavesBlock(FabricBlockSettings.of(Material.LEAVES).sounds(BlockSoundGroup.AZALEA_LEAVES).nonOpaque().resistance(0.1f).hardness((0.1f))), ItemGroup.BUILDING_BLOCKS);
+    public static final Block PALE_MOSS_CARPET = registerBlock("pale_moss_carpet",
+            new CarpetBlock(FabricBlockSettings.of(Material.MOSS_BLOCK).sounds(BlockSoundGroup.MOSS_CARPET).nonOpaque().resistance(0.1f).hardness((0.1f))), ItemGroup.BUILDING_BLOCKS);
+    public static final Block PALE_MOSS_BLOCK = registerBlock("pale_moss_block",
+            new MossBlock(FabricBlockSettings.of(Material.MOSS_BLOCK).sounds(BlockSoundGroup.MOSS_BLOCK).nonOpaque().resistance(0.1f).hardness((0.1f))), ItemGroup.BUILDING_BLOCKS);
 
+    public static final Identifier PALE_OAK_SIGN_TEXTURE = new Identifier(New_In_Old.MOD_ID, "entity/signs/pale_oak");
+
+    public static final Block STANDING_PALE_OAK_SIGN = registerBlock("standing_pale_oak_sign",
+            new TerraformSignBlock(PALE_OAK_SIGN_TEXTURE, FabricBlockSettings.copyOf(Blocks.OAK_SIGN).hardness(0.5f).resistance(0.5f).noCollision()), ItemGroup.BUILDING_BLOCKS);
+    public static final Block WALL_PALE_OAK_SIGN = registerBlock("wall_pale_oak_sign",
+            new TerraformWallSignBlock(PALE_OAK_SIGN_TEXTURE, FabricBlockSettings.copyOf(Blocks.OAK_WALL_SIGN).hardness(0.5f).resistance(0.5f).noCollision()));
+
+
+    public static final BlockFamily PALE_OAK_FAMILY = BlockFamilies.register(ModBlocks.PALE_OAK_PLANKS)
+            .sign(ModBlocks.STANDING_PALE_OAK_SIGN, ModBlocks.WALL_PALE_OAK_SIGN)
+            .group("wooden").unlockCriterionName("has_planks").build();
 
 
     private static Block registerBlock(String name, Block block, ItemGroup tab) {

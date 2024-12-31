@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_post",
+  "textures": {
+    "texture": "new_in_old:block/pale_oak_planks"
+  }
+}

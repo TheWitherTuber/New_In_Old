@@ -14,6 +14,8 @@ public class ModItems {
             new SignItem(new FabricItemSettings().maxCount(16), ModBlocks.STANDING_BAMBOO_SIGN, ModBlocks.WALL_BAMBOO_SIGN));
     public static final Item CHERRY_SIGN = registerItem("cherry_sign",
             new SignItem(new FabricItemSettings().maxCount(16), ModBlocks.STANDING_CHERRY_SIGN, ModBlocks.WALL_CHERRY_SIGN));
+    public static final Item PALE_OAK_SIGN = registerItem("pale_oak_sign",
+            new SignItem(new FabricItemSettings().maxCount(16), ModBlocks.STANDING_PALE_OAK_SIGN, ModBlocks.WALL_PALE_OAK_SIGN));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(New_In_Old.MOD_ID, name), item);

@@ -18,6 +18,8 @@ public class ModModelProvider extends FabricModelProvider {
         bamboo_pool.family(ModBlocks.BAMBOO_FAMILY);
         BlockStateModelGenerator.BlockTexturePool cherry_pool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CHERRY_PLANKS);
         cherry_pool.family(ModBlocks.CHERRY_FAMILY);
+        BlockStateModelGenerator.BlockTexturePool pale_oak_pool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.PALE_OAK_PLANKS);
+        pale_oak_pool.family(ModBlocks.PALE_OAK_FAMILY);
     }
 
 
