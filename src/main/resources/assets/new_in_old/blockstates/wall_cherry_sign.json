@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "new_in_old:block/wall_cherry_sign"
+    }
+  }
+}
