@@ -4,9 +4,9 @@ License
  MIT
 
 Credits 
-TheWitherTuber:owner,code,artist
+TheWitherTuber:owner,code
 Foxracoon_:code
 NicoYT44:debugger
 
 ECT:
-add supplementarys for hanging signs 
+add supplemntaries for hanging signs 
