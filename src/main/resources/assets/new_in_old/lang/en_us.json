@@ -34,7 +34,6 @@
   "block.new_in_old.standing_cherry_sign": "Cherry Sign",
   "item.new_in_old.cherry_sign": "Cherry Sign",
   "block.new_in_old.cherry_lantern": "Cherry Lantern",
-
   "block.new_in_old.pale_oak_log": "Pale Oak Log",
   "block.new_in_old.stripped_pale_oak_log": "Stripped Pale Oak Log",
   "block.new_in_old.pale_oak_planks": "Pale Oak Planks",
@@ -61,5 +60,27 @@
   "block.new_in_old.active_creaking_heart": "Active Creaking heart",
   "block.new_in_old.creaking_heart": "Creaking heart",
   "block.new_in_old.pale_lantern": "Pale Lantern",
-  "block.new_in_old.pale_oak_sign": "Pale Oak Sign"
+  "block.new_in_old.pale_oak_sign": "Pale Oak Sign",
+  "block.new_in_old.oak_chain": "Oak Chain",
+  "block.new_in_old.mangrove_lantern": "Mangrove Lantern",
+  "block.new_in_old.alpha_gravel": "Alpha Gravel",
+  "block.new_in_old.alpha_mossy_cobblestone": "Alpha Mossy Cobblestone ",
+  "block.new_in_old.alpha_cobblestone": "Alpha Cobblestone",
+  "block.new_in_old.dirt_slab": "Dirt Slab",
+  "block.new_in_old.alpha_cobblestone_stairs": "Alpha Cobblestone Stairs",
+  "block.new_in_old.alpha_cobblestone_slab": "Alpha Cobblestone Slab",
+  "block.new_in_old.alpha_mossy_cobblestone_slab": "Alpha Mossy Cobblestone Slab",
+  "block.new_in_old.alpha_mossy_cobblestone_stairs": "Alpha Mossy Cobblestone Stairs",
+  "block.new_in_old.alpha_mossy_cobblestone_wall": "Alpha Mossy Cobblestone Wall",
+  "block.new_in_old.alpha_cobblestone_wall": "Alpha Cobblestone Wall",
+
+  "item.new_in_old.music_disc_relic": "Music Disc",
+  "item.new_in_old.music_disc_relic.desc": "Aaron Cherof - Relic",
+  "item.new_in_old.music_disc_creator": "Music Disc",
+  "item.new_in_old.music_disc_creator.desc": "Lena Raine - Creator",
+  "item.new_in_old.music_disc_creator_music_box": "Music Disc",
+  "item.new_in_old.music_disc_creator_music_box.desc": "Lena Raine - Creator (Music Box)",
+  "item.new_in_old.music_disc_precipice": "Music Disc",
+  "item.new_in_old.music_disc_precipice.desc": "Aaron Cherof - Precipice"
+
 }

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "C": {
+      "item": "minecraft:mangrove_fence"
+    },
+    "W": {
+      "item": "minecraft:mangrove_planks"
+    },
+    "T": {
+      "item": "minecraft:torch"
+    }
+  },
+  "pattern": [
+    " C ",
+    "WWW",
+    "WTW"
+  ],
+  "result": {
+    "item": "new_in_old:mangrove_lantern"
+  }
+}

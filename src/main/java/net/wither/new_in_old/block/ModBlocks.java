@@ -109,6 +109,36 @@ public class ModBlocks {
 
     //Trial Update//
 
+    //Custom Blocks//
+
+    public static final Block OAK_CHAIN = registerBlock("oak_chain",
+            new ChainBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3).nonOpaque()), ItemGroup.BUILDING_BLOCKS);
+    public static final Block MANGROVE_LANTERN = registerBlock("mangrove_lantern",
+            new LanternBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3).luminance(15).nonOpaque()), ItemGroup.BUILDING_BLOCKS);
+    public static final Block ALPHA_COBBLESTONE = registerBlock("alpha_cobblestone",
+            new Block(FabricBlockSettings.of(Material.STONE).sounds(BlockSoundGroup.STONE).hardness(2).resistance(3).requiresTool()), ItemGroup.BUILDING_BLOCKS);
+    public static final Block ALPHA_COBBLESTONE_STAIRS = registerBlock("alpha_cobblestone_stairs",
+            new StairsBlock(ModBlocks.ALPHA_COBBLESTONE.getDefaultState(), FabricBlockSettings.of(Material.STONE).sounds(BlockSoundGroup.STONE).hardness(2).resistance(3).requiresTool()), ItemGroup.BUILDING_BLOCKS);
+    public static final Block ALPHA_COBBLESTONE_SLAB = registerBlock("alpha_cobblestone_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).sounds(BlockSoundGroup.STONE).hardness(2).resistance(3).requiresTool()), ItemGroup.BUILDING_BLOCKS);
+    public static final Block ALPHA_MOSSY_COBBLESTONE = registerBlock("alpha_mossy_cobblestone",
+            new Block(FabricBlockSettings.of(Material.STONE).sounds(BlockSoundGroup.STONE).hardness(2).resistance(3).requiresTool()), ItemGroup.BUILDING_BLOCKS);
+    public static final Block ALPHA_MOSSY_COBBLESTONE_STAIRS = registerBlock("alpha_mossy_cobblestone_stairs",
+            new StairsBlock(ModBlocks.ALPHA_MOSSY_COBBLESTONE.getDefaultState(),FabricBlockSettings.of(Material.STONE).sounds(BlockSoundGroup.STONE).hardness(2).resistance(3).requiresTool()), ItemGroup.BUILDING_BLOCKS);
+    public static final Block ALPHA_MOSSY_COBBLESTONE_SLAB = registerBlock("alpha_mossy_cobblestone_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).sounds(BlockSoundGroup.STONE).hardness(2).resistance(3).requiresTool()), ItemGroup.BUILDING_BLOCKS);
+    public static final Block ALPHA_MOSSY_COBBLESTONE_WALL = registerBlock("alpha_mossy_cobblestone_wall",
+            new WallBlock(FabricBlockSettings.of(Material.STONE).sounds(BlockSoundGroup.STONE).hardness(2).resistance(3).requiresTool()), ItemGroup.BUILDING_BLOCKS);
+    public static final Block ALPHA_COBBLESTONE_WALL = registerBlock("alpha_cobblestone_wall",
+            new WallBlock(FabricBlockSettings.of(Material.STONE).sounds(BlockSoundGroup.STONE).hardness(2).resistance(3).requiresTool()), ItemGroup.BUILDING_BLOCKS);
+    public static final Block ALPHA_GRAVEL = registerBlock("alpha_gravel",
+            new GravelBlock(FabricBlockSettings.of(Material.SOIL).sounds(BlockSoundGroup.GRAVEL).hardness(1).resistance(1)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block DIRT_SLAB = registerBlock("dirt_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.SOIL).sounds(BlockSoundGroup.GRAVEL).hardness(1).resistance(1)), ItemGroup.BUILDING_BLOCKS);
+
+
+
+
     //Pale Update//
     public static final Block PALE_OAK_PLANKS = registerBlock("pale_oak_planks",
             new Block(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);

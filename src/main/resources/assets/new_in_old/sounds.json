@@ -1,0 +1,34 @@
+{
+  "relic": {
+    "sounds": [
+      {
+        "name": "new_in_old:relic",
+        "stream": false
+      }
+    ]
+  },
+  "creator": {
+    "sounds": [
+      {
+        "name": "new_in_old:creator",
+        "stream": false
+      }
+    ]
+  },
+  "creator_music_box": {
+    "sounds": [
+      {
+        "name": "new_in_old:creator_music_box",
+        "stream": false
+      }
+    ]
+  },
+  "precipice": {
+    "sounds": [
+      {
+        "name": "new_in_old:precipice",
+        "stream": false
+      }
+    ]
+  }
+}

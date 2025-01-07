@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "new_in_old:block/alpha_cobblestone_slab"
+    },
+    "type=double": {
+      "model": "new_in_old:block/alpha_cobblestone"
+    },
+    "type=top": {
+      "model": "new_in_old:block/alpha_cobblestone_slab_top"
+    }
+  }
+}

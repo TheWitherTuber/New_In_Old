@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "new_in_old:block/mangrove_lantern"
+    },
+    "hanging=true": {
+      "model": "new_in_old:block/mangrove_lantern_hanging"
+    }
+  }
+}

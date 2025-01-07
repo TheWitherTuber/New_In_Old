@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:warped_planks"
+    },
+    "G": {
+      "item": "minecraft:gold_block"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "pattern": [
+    "#D#",
+    "#G#",
+    "#D#"
+  ],
+  "result": {
+    "item": "new_in_old:music_disc_creator"
+  }
+}

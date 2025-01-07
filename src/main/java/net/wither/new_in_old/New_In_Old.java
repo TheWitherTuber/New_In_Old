@@ -3,6 +3,7 @@ package net.wither.new_in_old;
 import net.fabricmc.api.ModInitializer;
 import net.wither.new_in_old.block.ModBlocks;
 import net.wither.new_in_old.item.ModItems;
+import net.wither.new_in_old.sound.ModSounds;
 import net.wither.new_in_old.util.ModFlammableBlocks;
 import net.wither.new_in_old.util.ModStrippableBlocks;
 import org.slf4j.Logger;
