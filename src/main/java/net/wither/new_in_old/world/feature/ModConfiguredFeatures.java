@@ -26,7 +26,6 @@ import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
 import net.wither.new_in_old.New_In_Old;
 import net.minecraft.util.collection.DataPool;
 import net.wither.new_in_old.block.ModBlocks;
-import java.util.List;
 
 public class ModConfiguredFeatures {
     public static class UndergroundConfiguredFeatures {
