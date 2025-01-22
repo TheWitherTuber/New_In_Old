@@ -21,10 +21,11 @@ public class New_In_Old implements ModInitializer {
 		ModConfiguredFeatures.registerConfiguredFeatures();
 		ModConfiguredFeatures.UndergroundConfiguredFeatures.registerUndergroundConfiguredFeatures();
 		ModBlocks.registerModBlocks();
-		ModItems.registerModItems();
+
 		ModFlammableBlocks.registerFlammableBlocks();
 		ModStrippableBlocks.registerStrippables();
 		ModBlocks.registerWaxing();
 		ModBlocks.registerOxidation();
+		ModItems.registerModItems();
 	}
 }
