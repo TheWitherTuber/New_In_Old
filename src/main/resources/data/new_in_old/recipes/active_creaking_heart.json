@@ -5,12 +5,13 @@
       "item": "new_in_old:creaking_heart"
     },
     "D": {
-      "item": "minecraft:orange_dye"
+      "item": "new_in_old:resin_clump"
     }
   },
   "pattern": [
     "D",
-    "#"
+    "#",
+    "D"
   ],
   "result": {
     "item": "new_in_old:active_creaking_heart"

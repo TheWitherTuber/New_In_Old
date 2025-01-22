@@ -5,6 +5,7 @@ import com.terraformersmc.terraform.sign.block.TerraformWallSignBlock;
 import jdk.jshell.Snippet;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
 import net.minecraft.block.*;
 import net.minecraft.data.family.BlockFamilies;
 import net.minecraft.data.family.BlockFamily;
@@ -18,8 +19,10 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.wither.new_in_old.New_In_Old;
 import net.minecraft.util.registry.Registry;
-
-
+import net.wither.new_in_old.block.custom.CopperDoorBlock;
+import net.wither.new_in_old.block.custom.PaleHangingMossBlock;
+import net.wither.new_in_old.block.custom.PaleHangingMossPlantBlock;
+import net.wither.new_in_old.block.custom.PaleMossBlock;
 
 
 public class ModBlocks {
@@ -108,7 +111,22 @@ public class ModBlocks {
             .group("wooden").unlockCriterionName("has_planks").build();
 
     //Trial Update//
-
+    public static final Block COPPER_DOOR = registerBlock("copper_door",
+            new CopperDoorBlock(Oxidizable.OxidationLevel.UNAFFECTED, AbstractBlock.Settings.copy(Blocks.IRON_DOOR).nonOpaque()));
+    public static final Block EXPOSED_COPPER_DOOR = registerBlock("exposed_copper_door",
+            new CopperDoorBlock(Oxidizable.OxidationLevel.EXPOSED, AbstractBlock.Settings.copy(Blocks.IRON_DOOR).nonOpaque()));
+    public static final Block WEATHERED_COPPER_DOOR = registerBlock("weathered_copper_door",
+            new CopperDoorBlock(Oxidizable.OxidationLevel.WEATHERED, AbstractBlock.Settings.copy(Blocks.IRON_DOOR).nonOpaque()));
+    public static final Block OXIDIZED_COPPER_DOOR = registerBlock("oxidized_copper_door",
+            new CopperDoorBlock(Oxidizable.OxidationLevel.OXIDIZED, AbstractBlock.Settings.copy(Blocks.IRON_DOOR).nonOpaque()));
+    public static final Block WAXED_COPPER_DOOR = registerBlock("waxed_copper_door",
+            new CopperDoorBlock(Oxidizable.OxidationLevel.UNAFFECTED, AbstractBlock.Settings.copy(Blocks.IRON_DOOR).nonOpaque()));
+    public static final Block WAXED_EXPOSED_COPPER_DOOR = registerBlock("waxed_exposed_copper_door",
+            new CopperDoorBlock(Oxidizable.OxidationLevel.EXPOSED, AbstractBlock.Settings.copy(Blocks.IRON_DOOR).nonOpaque()));
+    public static final Block WAXED_WEATHERED_COPPER_DOOR = registerBlock("waxed_weathered_copper_door",
+            new CopperDoorBlock(Oxidizable.OxidationLevel.WEATHERED, AbstractBlock.Settings.copy(Blocks.IRON_DOOR).nonOpaque()));
+    public static final Block WAXED_OXIDIZED_COPPER_DOOR = registerBlock("waxed_oxidized_copper_door",
+            new CopperDoorBlock(Oxidizable.OxidationLevel.OXIDIZED, AbstractBlock.Settings.copy(Blocks.IRON_DOOR).nonOpaque()));
     //Custom Blocks//
 
     public static final Block OAK_CHAIN = registerBlock("oak_chain",
@@ -171,7 +189,7 @@ public class ModBlocks {
     public static final Block PALE_MOSS_CARPET = registerBlock("pale_moss_carpet",
             new CarpetBlock(FabricBlockSettings.of(Material.MOSS_BLOCK).sounds(BlockSoundGroup.MOSS_CARPET).nonOpaque().resistance(0.1f).hardness((0.1f))), ItemGroup.BUILDING_BLOCKS);
     public static final Block PALE_MOSS_BLOCK = registerBlock("pale_moss_block",
-            new MossBlock(FabricBlockSettings.of(Material.MOSS_BLOCK).sounds(BlockSoundGroup.MOSS_BLOCK).nonOpaque().resistance(0.1f).hardness((0.1f))), ItemGroup.BUILDING_BLOCKS);
+            new PaleMossBlock(FabricBlockSettings.of(Material.MOSS_BLOCK).sounds(BlockSoundGroup.MOSS_BLOCK).nonOpaque().resistance(0.1f).hardness((0.1f))), ItemGroup.BUILDING_BLOCKS);
     public static final Block OPEN_EYEBLOSSOM = registerBlock("open_eyeblossom",
             new FlowerBlock(StatusEffects.BLINDNESS, 5, FabricBlockSettings.of(Material.MOSS_BLOCK).sounds(BlockSoundGroup.CROP).noCollision().luminance(5)), ItemGroup.BUILDING_BLOCKS);
     public static final Block CLOSED_EYEBLOSSOM = registerBlock("closed_eyeblossom",
@@ -186,6 +204,17 @@ public class ModBlocks {
             new PillarBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3).luminance(5)), ItemGroup.BUILDING_BLOCKS);
     public static final Block PALE_LANTERN = registerBlock("pale_lantern",
             new LanternBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3).luminance(15).nonOpaque()), ItemGroup.BUILDING_BLOCKS);
+    public static final Block PALE_HANGING_MOSS_PLANT = registerBlock("pale_hanging_moss_plant",
+            new PaleHangingMossPlantBlock(AbstractBlock.Settings.of(Material.PLANT).noCollision().nonOpaque()));
+    public static final Block PALE_HANGING_MOSS = registerBlock("pale_hanging_moss",
+            new PaleHangingMossBlock(AbstractBlock.Settings.of(Material.PLANT).noCollision().nonOpaque()), ItemGroup.BUILDING_BLOCKS);
+    public static final Block RESIN_BLOCK = registerBlock("resin_block",
+            new Block(FabricBlockSettings.of(Material.STONE).sounds(BlockSoundGroup.DEEPSLATE_BRICKS).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block RESIN_BRICKS = registerBlock("resin_bricks",
+            new Block(FabricBlockSettings.of(Material.STONE).sounds(BlockSoundGroup.DEEPSLATE_BRICKS).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block RESIN_CLUMP = registerBlock("resin_clump",
+            new GlowLichenBlock(FabricBlockSettings.of(Material.FROGSPAWN).sounds(BlockSoundGroup.STONE).hardness(0.1f).resistance(0.1f).noCollision().nonOpaque()), ItemGroup.BUILDING_BLOCKS);
+
 
     public static final Identifier PALE_OAK_SIGN_TEXTURE = new Identifier(New_In_Old.MOD_ID, "entity/signs/pale_oak");
 
@@ -223,8 +252,22 @@ public class ModBlocks {
     }
 
     public static void registerModBlocks() {
-
+        New_In_Old.LOGGER.debug("registering the ModdedBlocks for " + New_In_Old.MOD_ID);
     }
+    public static void registerOxidation() {
+         OxidizableBlocksRegistry.registerOxidizableBlockPair(COPPER_DOOR, EXPOSED_COPPER_DOOR);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(EXPOSED_COPPER_DOOR, WEATHERED_COPPER_DOOR);
+         OxidizableBlocksRegistry.registerOxidizableBlockPair(WEATHERED_COPPER_DOOR, OXIDIZED_COPPER_DOOR);
+        New_In_Old.LOGGER.debug("registering the OxidizableBlocks for " + New_In_Old.MOD_ID);
+           };
+    public static void registerWaxing() {
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.COPPER_DOOR, ModBlocks.WAXED_COPPER_DOOR);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.EXPOSED_COPPER_DOOR, ModBlocks.WAXED_EXPOSED_COPPER_DOOR);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.WEATHERED_COPPER_DOOR, ModBlocks.WAXED_WEATHERED_COPPER_DOOR);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.OXIDIZED_COPPER_DOOR, ModBlocks.WAXED_OXIDIZED_COPPER_DOOR);
+
+     New_In_Old.LOGGER.debug("registering the WaxAbleBlocks for " + New_In_Old.MOD_ID);
+     }
 }
 
 

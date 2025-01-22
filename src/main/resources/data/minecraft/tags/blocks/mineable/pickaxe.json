@@ -7,6 +7,8 @@
     "new_in_old:alpha_mossy_cobblestone_stairs",
     "new_in_old:alpha_mossy_cobblestone_slab",
     "new_in_old:alpha_mossy_cobblestone_wall",
-    "new_in_old:alpha_cobblestone_wall"
+    "new_in_old:resin_bricks",
+    "new_in_old:resin_block",
+    "new_in_old:resin_clump"
   ]
 }
