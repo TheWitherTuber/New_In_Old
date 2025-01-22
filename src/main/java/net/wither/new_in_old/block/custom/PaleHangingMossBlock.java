@@ -9,7 +9,6 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
-import net.minecraft.world.WorldView;
 import net.wither.new_in_old.block.ModBlocks;
 
 public class PaleHangingMossBlock extends AbstractPlantStemBlock {

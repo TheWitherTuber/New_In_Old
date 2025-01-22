@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:vine"
+    },
+    "D": {
+      "item": "minecraft:bone"
+    }
+  },
+  "pattern": [
+    "#D"
+  ],
+  "result": {
+    "item": "new_in_old:pale_hanging_moss"
+  }
+}

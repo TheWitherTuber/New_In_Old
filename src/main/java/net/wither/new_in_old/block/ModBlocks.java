@@ -218,9 +218,9 @@ public class ModBlocks {
     public static final Block PALE_LANTERN = registerBlock("pale_lantern",
             new LanternBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3).luminance(15).nonOpaque()), ItemGroup.BUILDING_BLOCKS);
     public static final Block PALE_HANGING_MOSS_PLANT = registerBlock("pale_hanging_moss_plant",
-            new PaleHangingMossPlantBlock(AbstractBlock.Settings.of(Material.PLANT).noCollision().nonOpaque()));
+            new PaleHangingMossPlantBlock(AbstractBlock.Settings.of(Material.PLANT).noCollision().nonOpaque().sounds(BlockSoundGroup.AZALEA_LEAVES)));
     public static final Block PALE_HANGING_MOSS = registerBlock("pale_hanging_moss",
-            new PaleHangingMossBlock(AbstractBlock.Settings.of(Material.PLANT).noCollision().nonOpaque()), ItemGroup.BUILDING_BLOCKS);
+            new PaleHangingMossBlock(AbstractBlock.Settings.of(Material.PLANT).noCollision().nonOpaque().sounds(BlockSoundGroup.AZALEA_LEAVES)), ItemGroup.BUILDING_BLOCKS);
     public static final Block RESIN_BLOCK = registerBlock("resin_block",
             new Block(FabricBlockSettings.of(Material.STONE).sounds(BlockSoundGroup.DEEPSLATE_BRICKS).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
     public static final Block RESIN_BRICKS = registerBlock("resin_bricks",

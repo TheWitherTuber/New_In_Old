@@ -1,7 +1,6 @@
 plugins {
 	id 'fabric-loom' version '1.2-SNAPSHOT'
 	id 'maven-publish'
-	id 'org.jetbrains.kotlin.jvm'
 }
 
 version = project.mod_version
@@ -19,7 +18,6 @@ repositories {
 			url = 'https://maven.terraformersmc.com/'
 		}
 	}
-	mavenCentral()
 }
 
 dependencies {
@@ -31,8 +29,7 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 	modImplementation "com.terraformersmc.terraform-api:terraform-wood-api-v1:4.2.0"
 	include "com.terraformersmc.terraform-api:terraform-wood-api-v1:4.2.0"
-	implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
-	// Uncomment the following line to enable the deprecated Fabric API modules. 
+	// Uncomment the following line to enable the deprecated Fabric API modules.
 	// These are included in the Fabric API production distribution and allow you to update your mod to the latest modules at a later more convenient time.
 
 	// modImplementation "net.fabricmc.fabric-api:fabric-api-deprecated:${project.fabric_version}"
@@ -61,6 +58,8 @@ java {
 	// If you remove this line, sources will not be generated.
 	withSourcesJar()
 
+	sourceCompatibility = JavaVersion.VERSION_17
+	targetCompatibility = JavaVersion.VERSION_17
 }
 
 jar {
@@ -84,7 +83,4 @@ publishing {
 		// The repositories here will be used for publishing your artifact, not for
 		// retrieving dependencies.
 	}
-}
-kotlin {
-	jvmToolchain(17)
 }
