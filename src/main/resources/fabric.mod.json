@@ -21,10 +21,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.wither.new_in_old.New_In_Old"
+      "net.wither.new_in_old.NewInOldMain"
     ],
     "client": [
-      "net.wither.new_in_old.new_in_oldClient"
+      "net.wither.new_in_old.NewInOldClient"
     ]
   },
   "mixins": [

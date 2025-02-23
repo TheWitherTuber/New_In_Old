@@ -1,14 +1,11 @@
 package net.wither.new_in_old.item;
 
-import net.fabricmc.fabric.api.item.v1.FabricItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.fabricmc.fabric.api.item.v1.FabricItemStack;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
-import net.wither.new_in_old.New_In_Old;
+import net.wither.new_in_old.NewInOldMain;
 import net.wither.new_in_old.block.ModBlocks;
 import net.wither.new_in_old.sound.ModSounds;
 
@@ -31,11 +28,11 @@ public class ModItems {
     public static final Item RESIN_BRICK = registerItem("resin_brick",
             new Item(new FabricItemSettings().group(ItemGroup.MISC)));
     private static Item registerItem(String name, Item item) {
-        return Registry.register(Registry.ITEM, new Identifier(New_In_Old.MOD_ID, name), item);
+        return Registry.register(Registry.ITEM, new Identifier(NewInOldMain.MOD_ID, name), item);
 
     }
 
     public static void registerModItems(){
-        New_In_Old.LOGGER.debug("Registering Mod Items for " + New_In_Old.MOD_ID);
+        NewInOldMain.LOGGER.debug("Registering Mod Items for " + NewInOldMain.MOD_ID);
     }
 }

@@ -1,30 +1,17 @@
 package net.wither.new_in_old.world.feature;
 
 import net.minecraft.block.*;
-import net.minecraft.state.property.Properties;
-import net.minecraft.structure.processor.StructureProcessorLists;
 import net.minecraft.tag.BlockTags;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.collection.DataPool;
-import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.VerticalSurfaceType;
-import net.minecraft.util.math.floatprovider.ClampedNormalFloatProvider;
-import net.minecraft.util.math.floatprovider.UniformFloatProvider;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
-import net.minecraft.util.math.intprovider.WeightedListIntProvider;
 import net.minecraft.util.registry.RegistryEntry;
-import net.minecraft.util.registry.RegistryEntryList;
-import net.minecraft.world.gen.blockpredicate.BlockPredicate;
 import net.minecraft.world.gen.feature.*;
-import net.minecraft.world.gen.placementmodifier.EnvironmentScanPlacementModifier;
 import net.minecraft.world.gen.placementmodifier.PlacementModifier;
-import net.minecraft.world.gen.placementmodifier.RandomOffsetPlacementModifier;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
-import net.minecraft.world.gen.stateprovider.RandomizedIntBlockStateProvider;
 import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
-import net.wither.new_in_old.New_In_Old;
-import net.minecraft.util.collection.DataPool;
+import net.wither.new_in_old.NewInOldMain;
 import net.wither.new_in_old.block.ModBlocks;
 
 public class ModConfiguredFeatures {
@@ -53,7 +40,7 @@ public class ModConfiguredFeatures {
 
     }
     public static void registerConfiguredFeatures() {
-        New_In_Old.LOGGER.debug("registering the ModConfiguredFeatures for " + New_In_Old.MOD_ID);
+        NewInOldMain.LOGGER.debug("registering the ModConfiguredFeatures for " + NewInOldMain.MOD_ID);
 
     }
 }

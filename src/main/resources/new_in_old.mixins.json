@@ -6,7 +6,9 @@
   "mixins": [
   ],
   "client": [
-    "ExampleMixin"
+    "client.BlockColorsMixin",
+    "client.BlockDustParticleMixin",
+    "client.ItemColorsMixin"
   ],
   "injectors": {
     "defaultRequire": 1

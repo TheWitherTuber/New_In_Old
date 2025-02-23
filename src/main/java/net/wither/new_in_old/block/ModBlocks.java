@@ -8,15 +8,13 @@ import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
 import net.minecraft.block.*;
 import net.minecraft.data.family.BlockFamilies;
 import net.minecraft.data.family.BlockFamily;
-import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
-import net.minecraft.potion.Potion;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
-import net.wither.new_in_old.New_In_Old;
+import net.wither.new_in_old.NewInOldMain;
 import net.minecraft.util.registry.Registry;
 import net.wither.new_in_old.block.custom.*;
 
@@ -52,7 +50,7 @@ public class ModBlocks {
     public static final Block BAMBOO_STAIRS = registerBlock("bamboo_stairs",
             new StairsBlock(ModBlocks.BAMBOO_MOSAIC.getDefaultState(), FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.BAMBOO).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
 
-    public static final Identifier BAMBOO_SIGN_TEXTURE = new Identifier(New_In_Old.MOD_ID, "entity/signs/bamboo");
+    public static final Identifier BAMBOO_SIGN_TEXTURE = new Identifier(NewInOldMain.MOD_ID, "entity/signs/bamboo");
 
     public static final Block STANDING_BAMBOO_SIGN = registerBlock("standing_bamboo_sign",
             new TerraformSignBlock(BAMBOO_SIGN_TEXTURE, FabricBlockSettings.copyOf(Blocks.OAK_SIGN).hardness(0.5f).resistance(0.5f).noCollision()), ItemGroup.BUILDING_BLOCKS);
@@ -95,7 +93,7 @@ public class ModBlocks {
     public static final Block CHERRY_LANTERN = registerBlock("cherry_lantern",
             new LanternBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3).luminance(15).nonOpaque()), ItemGroup.BUILDING_BLOCKS);
 
-    public static final Identifier CHERRY_SIGN_TEXTURE = new Identifier(New_In_Old.MOD_ID, "entity/signs/cherry");
+    public static final Identifier CHERRY_SIGN_TEXTURE = new Identifier(NewInOldMain.MOD_ID, "entity/signs/cherry");
 
     public static final Block STANDING_CHERRY_SIGN = registerBlock("standing_cherry_sign",
             new TerraformSignBlock(CHERRY_SIGN_TEXTURE, FabricBlockSettings.copyOf(Blocks.OAK_SIGN).hardness(0.5f).resistance(0.5f).noCollision()), ItemGroup.BUILDING_BLOCKS);
@@ -166,6 +164,10 @@ public class ModBlocks {
             new GravelBlock(FabricBlockSettings.of(Material.SOIL).sounds(BlockSoundGroup.GRAVEL).hardness(1).resistance(1)), ItemGroup.BUILDING_BLOCKS);
     public static final Block DIRT_SLAB = registerBlock("dirt_slab",
             new SlabBlock(FabricBlockSettings.of(Material.SOIL).sounds(BlockSoundGroup.GRAVEL).hardness(1).resistance(1)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block COARSE_DIRT_SLAB = registerBlock("coarse_dirt_slab",
+            new SlabBlock(FabricBlockSettings.copy(Blocks.COARSE_DIRT)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block GRASS_SLAB = registerBlock("grass_slab",
+            new SlabBlock(FabricBlockSettings.copy(Blocks.GRASS_BLOCK)), ItemGroup.BUILDING_BLOCKS);
 
 
 
@@ -229,7 +231,7 @@ public class ModBlocks {
             new GlowLichenBlock(FabricBlockSettings.of(Material.FROGSPAWN).sounds(BlockSoundGroup.STONE).hardness(0.1f).resistance(0.1f).noCollision().nonOpaque()), ItemGroup.BUILDING_BLOCKS);
 
 
-    public static final Identifier PALE_OAK_SIGN_TEXTURE = new Identifier(New_In_Old.MOD_ID, "entity/signs/pale_oak");
+    public static final Identifier PALE_OAK_SIGN_TEXTURE = new Identifier(NewInOldMain.MOD_ID, "entity/signs/pale_oak");
 
     public static final Block STANDING_PALE_OAK_SIGN = registerBlock("standing_pale_oak_sign",
             new TerraformSignBlock(PALE_OAK_SIGN_TEXTURE, FabricBlockSettings.copyOf(Blocks.OAK_SIGN).hardness(0.5f).resistance(0.5f).noCollision()), ItemGroup.BUILDING_BLOCKS);
@@ -244,28 +246,28 @@ public class ModBlocks {
 
     private static Block registerBlock(String name, Block block, ItemGroup tab) {
         registerBlockItem(name, block, tab);
-        return Registry.register(Registry.BLOCK, new Identifier(New_In_Old.MOD_ID, name), block);
+        return Registry.register(Registry.BLOCK, new Identifier(NewInOldMain.MOD_ID, name), block);
     }
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
-        return Registry.register(Registry.BLOCK, new Identifier(New_In_Old.MOD_ID, name), block);
+        return Registry.register(Registry.BLOCK, new Identifier(NewInOldMain.MOD_ID, name), block);
     }
 
     private static Item registerBlockItem(String name, Block block) {
-        Registry.register(Registry.ITEM, new Identifier(New_In_Old.MOD_ID, name),
+        Registry.register(Registry.ITEM, new Identifier(NewInOldMain.MOD_ID, name),
                 new BlockItem(block, new FabricItemSettings()));
         return null;
     }
 
 
     private static Item registerBlockItem(String name, Block block, ItemGroup tab) {
-        Registry.register(Registry.ITEM, new Identifier(New_In_Old.MOD_ID, name),
+        Registry.register(Registry.ITEM, new Identifier(NewInOldMain.MOD_ID, name),
                 new BlockItem(block, new FabricItemSettings().group(tab)));
         return null;
     }
 
     public static void registerModBlocks() {
-        New_In_Old.LOGGER.debug("registering the ModdedBlocks for " + New_In_Old.MOD_ID);
+        NewInOldMain.LOGGER.debug("registering the ModdedBlocks for " + NewInOldMain.MOD_ID);
     }
     public static void registerOxidation() {
          OxidizableBlocksRegistry.registerOxidizableBlockPair(COPPER_DOOR, EXPOSED_COPPER_DOOR);
@@ -275,7 +277,7 @@ public class ModBlocks {
         OxidizableBlocksRegistry.registerOxidizableBlockPair(COPPER_TRAPDOOR, EXPOSED_COPPER_TRAPDOOR);
         OxidizableBlocksRegistry.registerOxidizableBlockPair(EXPOSED_COPPER_TRAPDOOR, WEATHERED_COPPER_TRAPDOOR);
         OxidizableBlocksRegistry.registerOxidizableBlockPair(WEATHERED_COPPER_TRAPDOOR, OXIDIZED_COPPER_TRAPDOOR);
-        New_In_Old.LOGGER.debug("registering the OxidizableBlocks for " + New_In_Old.MOD_ID);
+        NewInOldMain.LOGGER.debug("registering the OxidizableBlocks for " + NewInOldMain.MOD_ID);
            };
     public static void registerWaxing() {
         OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.COPPER_DOOR, ModBlocks.WAXED_COPPER_DOOR);
@@ -288,7 +290,7 @@ public class ModBlocks {
         OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.WEATHERED_COPPER_TRAPDOOR, ModBlocks.WAXED_WEATHERED_COPPER_TRAPDOOR);
         OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.OXIDIZED_COPPER_TRAPDOOR, ModBlocks.WAXED_OXIDIZED_COPPER_TRAPDOOR);
 
-     New_In_Old.LOGGER.debug("registering the WaxAbleBlocks for " + New_In_Old.MOD_ID);
+     NewInOldMain.LOGGER.debug("registering the WaxAbleBlocks for " + NewInOldMain.MOD_ID);
      }
 }
 

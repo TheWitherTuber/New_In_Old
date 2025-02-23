@@ -1,6 +1,7 @@
 {
   "values": [
     "new_in_old:alpha_gravel",
-    "new_in_old:dirt_slab"
+    "new_in_old:dirt_slab",
+    "new_in_old:coarse_dirt_slab"
   ]
 }
