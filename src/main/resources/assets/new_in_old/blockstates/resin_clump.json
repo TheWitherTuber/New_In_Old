@@ -10,7 +10,7 @@
     },
     {
       "apply": {
-        "model": "mnew_in_old:block/resin_clump"
+        "model": "new_in_old:block/resin_clump"
       },
       "when": {
         "down": "false",

@@ -9,6 +9,22 @@
     "new_in_old:alpha_mossy_cobblestone_wall",
     "new_in_old:resin_bricks",
     "new_in_old:resin_block",
-    "new_in_old:resin_clump"
+    "new_in_old:resin_clump",
+    "new_in_old:copper_door",
+    "new_in_old:waxed_copper_door",
+    "new_in_old:waxed_exposed_copper_door",
+    "new_in_old:waxed_oxidized_copper_door",
+    "new_in_old:waxed_weathered_copper_door",
+    "new_in_old:weathered_copper_door",
+    "new_in_old:exposed_copper_door",
+    "new_in_old:oxidized_copper_door",
+    "new_in_old:copper_trapdoor",
+    "new_in_old:waxed_copper_trapdoor",
+    "new_in_old:waxed_exposed_copper_trapdoor",
+    "new_in_old:waxed_oxidized_copper_trapdoor",
+    "new_in_old:waxed_weathered_copper_trapdoor",
+    "new_in_old:weathered_copper_trapdoor",
+    "new_in_old:exposed_copper_trapdoor",
+    "new_in_old:oxidized_copper_trapdoor"
   ]
 }

@@ -2,11 +2,14 @@ package net.wither.new_in_old.block.custom;
 
 import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 
 public class CopperTrapdoorBlock extends TrapdoorBlock implements Oxidizable {
@@ -20,6 +23,13 @@ public class CopperTrapdoorBlock extends TrapdoorBlock implements Oxidizable {
     public CopperTrapdoorBlock(Settings settings, OxidationLevel oxidationLevel) {
         super(settings);
         this.oxidationLevel = oxidationLevel;
+    }
+    @SuppressWarnings("deprecation")
+    public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+        this.tickDegradation(state, world, pos, random);
+    }
+    public boolean hasRandomTicks(BlockState state) {
+        return Oxidizable.getIncreasedOxidationBlock(state.getBlock()).isPresent();
     }
 
     @Override

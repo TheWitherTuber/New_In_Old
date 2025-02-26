@@ -1,20 +1,14 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "group": "wooden_pressure_plate",
-  "key": {
-    "#": {
-      "item": "minecraft:moss_block"
-    },
-    "D": {
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
       "item": "minecraft:bone"
+    },
+    {
+      "item": "minecraft:moss_carpet"
     }
-  },
-  "pattern": [
-    "D",
-    "#"
   ],
   "result": {
-    "item": "new_in_old:pale_moss_carpet",
-    "count": 4
+    "item": "new_in_old:pale_moss_carpet"
   }
 }

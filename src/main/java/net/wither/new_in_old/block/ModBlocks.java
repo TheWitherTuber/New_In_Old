@@ -17,6 +17,8 @@ import net.minecraft.util.Identifier;
 import net.wither.new_in_old.NewInOldMain;
 import net.minecraft.util.registry.Registry;
 import net.wither.new_in_old.block.custom.*;
+import net.wither.new_in_old.world.feature.tree.CherrySaplingGenerator;
+import net.wither.new_in_old.world.feature.tree.PaleOakSaplingGenerator;
 
 
 public class ModBlocks {
@@ -26,34 +28,34 @@ public class ModBlocks {
     public static final Block STRIPPED_BLOCK_OF_BAMBOO = registerBlock("stripped_block_of_bamboo",
             new PillarBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.BAMBOO).hardness(2).resistance(2)), ItemGroup.BUILDING_BLOCKS);
     public static final Block BAMBOO_PLANKS = registerBlock("bamboo_planks",
-            new Block(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.BAMBOO).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
+            new Block(FabricBlockSettings.copy(Blocks.OAK_PLANKS).sounds(BlockSoundGroup.BAMBOO)), ItemGroup.BUILDING_BLOCKS);
     public static final Block BAMBOO_BUTTON = registerBlock("bamboo_button",
-            new WoodenButtonBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.BAMBOO).hardness(0.5f).resistance(0.5f).noCollision()), ItemGroup.BUILDING_BLOCKS);
+            new WoodenButtonBlock(FabricBlockSettings.copy(Blocks.OAK_BUTTON).sounds(BlockSoundGroup.BAMBOO)), ItemGroup.REDSTONE);
     public static final Block BAMBOO_DOOR = registerBlock("bamboo_door",
-            new DoorBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque().sounds(BlockSoundGroup.BAMBOO).hardness(3).resistance(3)), ItemGroup.BUILDING_BLOCKS);
+            new DoorBlock(FabricBlockSettings.copy(Blocks.OAK_DOOR).sounds(BlockSoundGroup.BAMBOO)), ItemGroup.REDSTONE);
     public static final Block BAMBOO_FENCE = registerBlock("bamboo_fence",
-            new FenceBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.BAMBOO).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
+            new FenceBlock(FabricBlockSettings.copy(Blocks.OAK_FENCE).sounds(BlockSoundGroup.BAMBOO)), ItemGroup.DECORATIONS);
     public static final Block BAMBOO_FENCE_GATE = registerBlock("bamboo_fence_gate",
-            new FenceGateBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.BAMBOO).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
+            new FenceGateBlock(FabricBlockSettings.copy(Blocks.OAK_FENCE_GATE).sounds(BlockSoundGroup.BAMBOO)), ItemGroup.REDSTONE);
     public static final Block BAMBOO_MOSAIC = registerBlock("bamboo_mosaic",
-            new Block(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.BAMBOO).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
+            new Block(FabricBlockSettings.copy(Blocks.OAK_PLANKS).sounds(BlockSoundGroup.BAMBOO)), ItemGroup.BUILDING_BLOCKS);
     public static final Block BAMBOO_MOSAIC_SLAB = registerBlock("bamboo_mosaic_slab",
             new SlabBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.BAMBOO).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
     public static final Block BAMBOO_MOSAIC_STAIRS = registerBlock("bamboo_mosaic_stairs",
             new StairsBlock(ModBlocks.BAMBOO_MOSAIC.getDefaultState(), FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.BAMBOO).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
     public static final Block BAMBOO_PRESSSURE_PLATE = registerBlock("bamboo_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING , FabricBlockSettings.of(Material.BAMBOO).noCollision().sounds(BlockSoundGroup.BAMBOO).hardness(0.5f).resistance(0.5f)), ItemGroup.BUILDING_BLOCKS);
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING , FabricBlockSettings.of(Material.BAMBOO).noCollision().sounds(BlockSoundGroup.BAMBOO).hardness(0.5f).resistance(0.5f)), ItemGroup.REDSTONE);
     public static final Block BAMBOO_SLAB = registerBlock("bamboo_slab",
             new SlabBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.BAMBOO).hardness(2).resistance(2)), ItemGroup.BUILDING_BLOCKS);
     public static final Block BAMBOO_TRAPDOOR = registerBlock("bamboo_trapdoor",
-            new TrapdoorBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque().sounds(BlockSoundGroup.BAMBOO).hardness(3).resistance(3)), ItemGroup.BUILDING_BLOCKS);
+            new TrapdoorBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque().sounds(BlockSoundGroup.BAMBOO).hardness(3).resistance(3)), ItemGroup.REDSTONE);
     public static final Block BAMBOO_STAIRS = registerBlock("bamboo_stairs",
             new StairsBlock(ModBlocks.BAMBOO_MOSAIC.getDefaultState(), FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.BAMBOO).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
 
     public static final Identifier BAMBOO_SIGN_TEXTURE = new Identifier(NewInOldMain.MOD_ID, "entity/signs/bamboo");
 
     public static final Block STANDING_BAMBOO_SIGN = registerBlock("standing_bamboo_sign",
-            new TerraformSignBlock(BAMBOO_SIGN_TEXTURE, FabricBlockSettings.copyOf(Blocks.OAK_SIGN).hardness(0.5f).resistance(0.5f).noCollision()), ItemGroup.BUILDING_BLOCKS);
+            new TerraformSignBlock(BAMBOO_SIGN_TEXTURE, FabricBlockSettings.copyOf(Blocks.OAK_SIGN).hardness(0.5f).resistance(0.5f).noCollision()), ItemGroup.DECORATIONS);
     public static final Block WALL_BAMBOO_SIGN = registerBlock("wall_bamboo_sign",
             new TerraformWallSignBlock(BAMBOO_SIGN_TEXTURE, FabricBlockSettings.copyOf(Blocks.OAK_WALL_SIGN).hardness(0.5f).resistance(0.5f).noCollision()));
 
@@ -63,40 +65,43 @@ public class ModBlocks {
 
     //Cherry Update//
     public static final Block CHERRY_BUTTON = registerBlock("cherry_button",
-            new WoodenButtonBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(0.5f).resistance(0.5f).noCollision()), ItemGroup.BUILDING_BLOCKS);
+            new WoodenButtonBlock(FabricBlockSettings.copy(Blocks.OAK_BUTTON)), ItemGroup.REDSTONE);
     public static final Block CHERRY_PLANKS = registerBlock("cherry_planks",
-            new Block(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
+            new Block(FabricBlockSettings.copy(Blocks.OAK_PLANKS)), ItemGroup.BUILDING_BLOCKS);
     public static final Block CHERRY_WOOD = registerBlock("cherry_wood",
-            new PillarBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(2)), ItemGroup.BUILDING_BLOCKS);
+            new PillarBlock(FabricBlockSettings.copy(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS);
     public static final Block CHERRY_LOG = registerBlock("cherry_log",
-            new PillarBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(2)), ItemGroup.BUILDING_BLOCKS);
+            new PillarBlock(FabricBlockSettings.copy(Blocks.OAK_LOG)), ItemGroup.BUILDING_BLOCKS);
     public static final Block STRIPPED_CHERRY_LOG = registerBlock("stripped_cherry_log",
-            new PillarBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(2)), ItemGroup.BUILDING_BLOCKS);
+            new PillarBlock(FabricBlockSettings.copy(Blocks.STRIPPED_OAK_LOG)), ItemGroup.BUILDING_BLOCKS);
     public static final Block STRIPPED_CHERRY_WOOD = registerBlock("stripped_cherry_wood",
-            new PillarBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(2)), ItemGroup.BUILDING_BLOCKS);
+            new PillarBlock(FabricBlockSettings.copy(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.BUILDING_BLOCKS);
     public static final Block CHERRY_DOOR = registerBlock("cherry_door",
-            new DoorBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque().sounds(BlockSoundGroup.WOOD).hardness(3).resistance(3)), ItemGroup.BUILDING_BLOCKS);
+            new DoorBlock(FabricBlockSettings.copy(Blocks.OAK_DOOR)), ItemGroup.REDSTONE);
     public static final Block CHERRY_FENCE = registerBlock("cherry_fence",
-            new FenceBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
+            new FenceBlock(FabricBlockSettings.copy(Blocks.OAK_FENCE)), ItemGroup.DECORATIONS);
     public static final Block CHERRY_FENCE_GATE = registerBlock("cherry_fence_gate",
-            new FenceGateBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
+            new FenceGateBlock(FabricBlockSettings.copy(Blocks.OAK_FENCE_GATE)), ItemGroup.REDSTONE);
     public static final Block CHERRY_PRESSSURE_PLATE = registerBlock("cherry_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING , FabricBlockSettings.of(Material.WOOD).noCollision().sounds(BlockSoundGroup.WOOD).hardness(0.5f).resistance(0.5f)), ItemGroup.BUILDING_BLOCKS);
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.copy(Blocks.OAK_PRESSURE_PLATE)), ItemGroup.REDSTONE);
     public static final Block CHERRY_SLAB = registerBlock("cherry_slab",
-            new SlabBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(2)), ItemGroup.BUILDING_BLOCKS);
+            new SlabBlock(FabricBlockSettings.copy(Blocks.OAK_SLAB)), ItemGroup.BUILDING_BLOCKS);
     public static final Block CHERRY_TRAPDOOR = registerBlock("cherry_trapdoor",
-            new TrapdoorBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque().sounds(BlockSoundGroup.WOOD).hardness(3).resistance(3)), ItemGroup.BUILDING_BLOCKS);
+            new TrapdoorBlock(FabricBlockSettings.copy(Blocks.OAK_TRAPDOOR)), ItemGroup.REDSTONE);
     public static final Block CHERRY_STAIRS = registerBlock("cherry_stairs",
-            new StairsBlock(ModBlocks.CHERRY_PLANKS.getDefaultState(), FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
+            new StairsBlock(ModBlocks.CHERRY_PLANKS.getDefaultState(), FabricBlockSettings.copy(Blocks.OAK_STAIRS)), ItemGroup.BUILDING_BLOCKS);
     public static final Block CHERRY_LEAVES = registerBlock("cherry_leaves",
-            new LeavesBlock(FabricBlockSettings.of(Material.LEAVES).sounds(BlockSoundGroup.AZALEA_LEAVES).nonOpaque().resistance(0.2f).hardness((0.2f))), ItemGroup.BUILDING_BLOCKS);
+            new LeavesBlock(FabricBlockSettings.copy(Blocks.OAK_LEAVES)), ItemGroup.DECORATIONS);
     public static final Block CHERRY_LANTERN = registerBlock("cherry_lantern",
-            new LanternBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3).luminance(15).nonOpaque()), ItemGroup.BUILDING_BLOCKS);
+            new LanternBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3).luminance(15).nonOpaque()), ItemGroup.DECORATIONS);
+    public static final Block CHERRY_SAPLING = registerBlock("cherry_sapling",
+            new SaplingBlock(new CherrySaplingGenerator(),
+                    FabricBlockSettings.copy(Blocks.OAK_SAPLING)), ItemGroup.DECORATIONS);
 
     public static final Identifier CHERRY_SIGN_TEXTURE = new Identifier(NewInOldMain.MOD_ID, "entity/signs/cherry");
 
     public static final Block STANDING_CHERRY_SIGN = registerBlock("standing_cherry_sign",
-            new TerraformSignBlock(CHERRY_SIGN_TEXTURE, FabricBlockSettings.copyOf(Blocks.OAK_SIGN).hardness(0.5f).resistance(0.5f).noCollision()), ItemGroup.BUILDING_BLOCKS);
+            new TerraformSignBlock(CHERRY_SIGN_TEXTURE, FabricBlockSettings.copyOf(Blocks.OAK_SIGN).hardness(0.5f).resistance(0.5f).noCollision()), ItemGroup.DECORATIONS);
     public static final Block WALL_CHERRY_SIGN = registerBlock("wall_cherry_sign",
             new TerraformWallSignBlock(CHERRY_SIGN_TEXTURE, FabricBlockSettings.copyOf(Blocks.OAK_WALL_SIGN).hardness(0.5f).resistance(0.5f).noCollision()));
 
@@ -106,44 +111,42 @@ public class ModBlocks {
 
     //Trial Update//
     public static final Block COPPER_DOOR = registerBlock("copper_door",
-            new CopperDoorBlock(Oxidizable.OxidationLevel.UNAFFECTED, AbstractBlock.Settings.copy(Blocks.IRON_DOOR).nonOpaque()));
+            new CopperDoorBlock(Oxidizable.OxidationLevel.UNAFFECTED, AbstractBlock.Settings.copy(Blocks.IRON_DOOR).nonOpaque()), ItemGroup.REDSTONE);
     public static final Block EXPOSED_COPPER_DOOR = registerBlock("exposed_copper_door",
-            new CopperDoorBlock(Oxidizable.OxidationLevel.EXPOSED, AbstractBlock.Settings.copy(Blocks.IRON_DOOR).nonOpaque()));
+            new CopperDoorBlock(Oxidizable.OxidationLevel.EXPOSED, AbstractBlock.Settings.copy(Blocks.IRON_DOOR).nonOpaque()), ItemGroup.REDSTONE);
     public static final Block WEATHERED_COPPER_DOOR = registerBlock("weathered_copper_door",
-            new CopperDoorBlock(Oxidizable.OxidationLevel.WEATHERED, AbstractBlock.Settings.copy(Blocks.IRON_DOOR).nonOpaque()));
+            new CopperDoorBlock(Oxidizable.OxidationLevel.WEATHERED, AbstractBlock.Settings.copy(Blocks.IRON_DOOR).nonOpaque()), ItemGroup.REDSTONE);
     public static final Block OXIDIZED_COPPER_DOOR = registerBlock("oxidized_copper_door",
-            new CopperDoorBlock(Oxidizable.OxidationLevel.OXIDIZED, AbstractBlock.Settings.copy(Blocks.IRON_DOOR).nonOpaque()));
+            new CopperDoorBlock(Oxidizable.OxidationLevel.OXIDIZED, AbstractBlock.Settings.copy(Blocks.IRON_DOOR).nonOpaque()), ItemGroup.REDSTONE);
     public static final Block WAXED_COPPER_DOOR = registerBlock("waxed_copper_door",
-            new CopperDoorBlock(Oxidizable.OxidationLevel.UNAFFECTED, AbstractBlock.Settings.copy(Blocks.IRON_DOOR).nonOpaque()));
+            new CopperDoorBlock(Oxidizable.OxidationLevel.UNAFFECTED, AbstractBlock.Settings.copy(Blocks.IRON_DOOR).nonOpaque()), ItemGroup.REDSTONE);
     public static final Block WAXED_EXPOSED_COPPER_DOOR = registerBlock("waxed_exposed_copper_door",
-            new CopperDoorBlock(Oxidizable.OxidationLevel.EXPOSED, AbstractBlock.Settings.copy(Blocks.IRON_DOOR).nonOpaque()));
+            new CopperDoorBlock(Oxidizable.OxidationLevel.EXPOSED, AbstractBlock.Settings.copy(Blocks.IRON_DOOR).nonOpaque()), ItemGroup.REDSTONE);
     public static final Block WAXED_WEATHERED_COPPER_DOOR = registerBlock("waxed_weathered_copper_door",
-            new CopperDoorBlock(Oxidizable.OxidationLevel.WEATHERED, AbstractBlock.Settings.copy(Blocks.IRON_DOOR).nonOpaque()));
+            new CopperDoorBlock(Oxidizable.OxidationLevel.WEATHERED, AbstractBlock.Settings.copy(Blocks.IRON_DOOR).nonOpaque()), ItemGroup.REDSTONE);
     public static final Block WAXED_OXIDIZED_COPPER_DOOR = registerBlock("waxed_oxidized_copper_door",
-            new CopperDoorBlock(Oxidizable.OxidationLevel.OXIDIZED, AbstractBlock.Settings.copy(Blocks.IRON_DOOR).nonOpaque()));
+            new CopperDoorBlock(Oxidizable.OxidationLevel.OXIDIZED, AbstractBlock.Settings.copy(Blocks.IRON_DOOR).nonOpaque()), ItemGroup.REDSTONE);
 
     public static final Block COPPER_TRAPDOOR = registerBlock("copper_trapdoor",
-            new CopperTrapdoorBlock(Oxidizable.OxidationLevel.UNAFFECTED, AbstractBlock.Settings.copy(Blocks.IRON_DOOR).nonOpaque()));
+            new CopperTrapdoorBlock(Oxidizable.OxidationLevel.UNAFFECTED, AbstractBlock.Settings.copy(Blocks.IRON_TRAPDOOR).nonOpaque()), ItemGroup.REDSTONE);
     public static final Block EXPOSED_COPPER_TRAPDOOR = registerBlock("exposed_copper_trapdoor",
-            new CopperTrapdoorBlock(Oxidizable.OxidationLevel.EXPOSED, AbstractBlock.Settings.copy(Blocks.IRON_DOOR).nonOpaque()));
+            new CopperTrapdoorBlock(Oxidizable.OxidationLevel.EXPOSED, AbstractBlock.Settings.copy(Blocks.IRON_TRAPDOOR).nonOpaque()), ItemGroup.REDSTONE);
     public static final Block WEATHERED_COPPER_TRAPDOOR = registerBlock("weathered_copper_trapdoor",
-            new CopperTrapdoorBlock(Oxidizable.OxidationLevel.WEATHERED, AbstractBlock.Settings.copy(Blocks.IRON_DOOR).nonOpaque()));
+            new CopperTrapdoorBlock(Oxidizable.OxidationLevel.WEATHERED, AbstractBlock.Settings.copy(Blocks.IRON_TRAPDOOR).nonOpaque()), ItemGroup.REDSTONE);
     public static final Block OXIDIZED_COPPER_TRAPDOOR = registerBlock("oxidized_copper_trapdoor",
-            new CopperTrapdoorBlock(Oxidizable.OxidationLevel.OXIDIZED, AbstractBlock.Settings.copy(Blocks.IRON_DOOR).nonOpaque()));
+            new CopperTrapdoorBlock(Oxidizable.OxidationLevel.OXIDIZED, AbstractBlock.Settings.copy(Blocks.IRON_TRAPDOOR).nonOpaque()), ItemGroup.REDSTONE);
     public static final Block WAXED_COPPER_TRAPDOOR = registerBlock("waxed_copper_trapdoor",
-            new CopperTrapdoorBlock(Oxidizable.OxidationLevel.UNAFFECTED, AbstractBlock.Settings.copy(Blocks.IRON_DOOR).nonOpaque()));
+            new CopperTrapdoorBlock(Oxidizable.OxidationLevel.UNAFFECTED, AbstractBlock.Settings.copy(Blocks.IRON_TRAPDOOR).nonOpaque()), ItemGroup.REDSTONE);
     public static final Block WAXED_EXPOSED_COPPER_TRAPDOOR = registerBlock("waxed_exposed_copper_trapdoor",
-            new CopperTrapdoorBlock(Oxidizable.OxidationLevel.EXPOSED, AbstractBlock.Settings.copy(Blocks.IRON_DOOR).nonOpaque()));
+            new CopperTrapdoorBlock(Oxidizable.OxidationLevel.EXPOSED, AbstractBlock.Settings.copy(Blocks.IRON_TRAPDOOR).nonOpaque()), ItemGroup.REDSTONE);
     public static final Block WAXED_WEATHERED_COPPER_TRAPDOOR = registerBlock("waxed_weathered_copper_trapdoor",
-            new CopperTrapdoorBlock(Oxidizable.OxidationLevel.WEATHERED, AbstractBlock.Settings.copy(Blocks.IRON_DOOR).nonOpaque()));
+            new CopperTrapdoorBlock(Oxidizable.OxidationLevel.WEATHERED, AbstractBlock.Settings.copy(Blocks.IRON_TRAPDOOR).nonOpaque()), ItemGroup.REDSTONE);
     public static final Block WAXED_OXIDIZED_COPPER_TRAPDOOR = registerBlock("waxed_oxidized_copper_trapdoor",
-            new CopperTrapdoorBlock(Oxidizable.OxidationLevel.OXIDIZED, AbstractBlock.Settings.copy(Blocks.IRON_DOOR).nonOpaque()));
+            new CopperTrapdoorBlock(Oxidizable.OxidationLevel.OXIDIZED, AbstractBlock.Settings.copy(Blocks.IRON_TRAPDOOR).nonOpaque()), ItemGroup.REDSTONE);
     //Custom Blocks//
 
-    public static final Block OAK_CHAIN = registerBlock("oak_chain",
-            new ChainBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3).nonOpaque()), ItemGroup.BUILDING_BLOCKS);
     public static final Block MANGROVE_LANTERN = registerBlock("mangrove_lantern",
-            new LanternBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3).luminance(15).nonOpaque()), ItemGroup.BUILDING_BLOCKS);
+            new LanternBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3).luminance(15).nonOpaque()), ItemGroup.DECORATIONS);
     public static final Block ALPHA_COBBLESTONE = registerBlock("alpha_cobblestone",
             new Block(FabricBlockSettings.of(Material.STONE).sounds(BlockSoundGroup.STONE).hardness(2).resistance(3).requiresTool()), ItemGroup.BUILDING_BLOCKS);
     public static final Block ALPHA_COBBLESTONE_STAIRS = registerBlock("alpha_cobblestone_stairs",
@@ -157,9 +160,9 @@ public class ModBlocks {
     public static final Block ALPHA_MOSSY_COBBLESTONE_SLAB = registerBlock("alpha_mossy_cobblestone_slab",
             new SlabBlock(FabricBlockSettings.of(Material.STONE).sounds(BlockSoundGroup.STONE).hardness(2).resistance(3).requiresTool()), ItemGroup.BUILDING_BLOCKS);
     public static final Block ALPHA_MOSSY_COBBLESTONE_WALL = registerBlock("alpha_mossy_cobblestone_wall",
-            new WallBlock(FabricBlockSettings.of(Material.STONE).sounds(BlockSoundGroup.STONE).hardness(2).resistance(3).requiresTool()), ItemGroup.BUILDING_BLOCKS);
+            new WallBlock(FabricBlockSettings.of(Material.STONE).sounds(BlockSoundGroup.STONE).hardness(2).resistance(3).requiresTool()), ItemGroup.DECORATIONS);
     public static final Block ALPHA_COBBLESTONE_WALL = registerBlock("alpha_cobblestone_wall",
-            new WallBlock(FabricBlockSettings.of(Material.STONE).sounds(BlockSoundGroup.STONE).hardness(2).resistance(3).requiresTool()), ItemGroup.BUILDING_BLOCKS);
+            new WallBlock(FabricBlockSettings.of(Material.STONE).sounds(BlockSoundGroup.STONE).hardness(2).resistance(3).requiresTool()), ItemGroup.DECORATIONS);
     public static final Block ALPHA_GRAVEL = registerBlock("alpha_gravel",
             new GravelBlock(FabricBlockSettings.of(Material.SOIL).sounds(BlockSoundGroup.GRAVEL).hardness(1).resistance(1)), ItemGroup.BUILDING_BLOCKS);
     public static final Block DIRT_SLAB = registerBlock("dirt_slab",
@@ -174,11 +177,11 @@ public class ModBlocks {
 
     //Pale Update//
     public static final Block PALE_OAK_PLANKS = registerBlock("pale_oak_planks",
-            new Block(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
+            new Block(FabricBlockSettings.copy(Blocks.OAK_PLANKS)), ItemGroup.BUILDING_BLOCKS);
     public static final Block PALE_OAK_PRESSSURE_PLATE = registerBlock("pale_oak_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING , FabricBlockSettings.of(Material.WOOD).noCollision().sounds(BlockSoundGroup.WOOD).hardness(0.5f).resistance(0.5f)), ItemGroup.BUILDING_BLOCKS);
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.copy(Blocks.OAK_PRESSURE_PLATE)), ItemGroup.BUILDING_BLOCKS);
     public static final Block PALE_OAK_BUTTON = registerBlock("pale_oak_button",
-            new WoodenButtonBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(0.5f).resistance(0.5f).noCollision()), ItemGroup.BUILDING_BLOCKS);
+            new WoodenButtonBlock(FabricBlockSettings.copy(Blocks.OAK_BUTTON)), ItemGroup.REDSTONE);
     public static final Block PALE_OAK_WOOD = registerBlock("pale_oak_wood",
             new PillarBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(2)), ItemGroup.BUILDING_BLOCKS);
     public static final Block PALE_OAK_LOG = registerBlock("pale_oak_log",
@@ -188,27 +191,30 @@ public class ModBlocks {
     public static final Block STRIPPED_PALE_OAK_WOOD = registerBlock("stripped_pale_oak_wood",
             new PillarBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(2)), ItemGroup.BUILDING_BLOCKS);
     public static final Block PALE_OAK_DOOR = registerBlock("pale_oak_door",
-            new DoorBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque().sounds(BlockSoundGroup.WOOD).hardness(3).resistance(3)), ItemGroup.BUILDING_BLOCKS);
+            new DoorBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque().sounds(BlockSoundGroup.WOOD).hardness(3).resistance(3)), ItemGroup.REDSTONE);
     public static final Block PALE_OAK_FENCE = registerBlock("pale_oak_fence",
-            new FenceBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
+            new FenceBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3)), ItemGroup.DECORATIONS);
     public static final Block PALE_OAK_FENCE_GATE = registerBlock("pale_oak_fence_gate",
-            new FenceGateBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
+            new FenceGateBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3)), ItemGroup.REDSTONE);
     public static final Block PALE_OAK_SLAB = registerBlock("pale_oak_slab",
             new SlabBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(2)), ItemGroup.BUILDING_BLOCKS);
     public static final Block PALE_OAK_TRAPDOOR = registerBlock("pale_oak_trapdoor",
-            new TrapdoorBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque().sounds(BlockSoundGroup.WOOD).hardness(3).resistance(3)), ItemGroup.BUILDING_BLOCKS);
+            new TrapdoorBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque().sounds(BlockSoundGroup.WOOD).hardness(3).resistance(3)), ItemGroup.REDSTONE);
     public static final Block PALE_OAK_STAIRS = registerBlock("pale_oak_stairs",
             new StairsBlock(ModBlocks.PALE_OAK_PLANKS.getDefaultState(), FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
     public static final Block PALE_OAK_LEAVES = registerBlock("pale_oak_leaves",
-            new LeavesBlock(FabricBlockSettings.of(Material.LEAVES).sounds(BlockSoundGroup.AZALEA_LEAVES).nonOpaque().resistance(0.2f).hardness((0.2f))), ItemGroup.BUILDING_BLOCKS);
+            new LeavesBlock(FabricBlockSettings.copy(Blocks.OAK_LEAVES)), ItemGroup.DECORATIONS);
+    public static final Block PALE_OAK_SAPLING = registerBlock("pale_oak_sapling",
+            new SaplingBlock(new PaleOakSaplingGenerator(),
+                    FabricBlockSettings.copy(Blocks.OAK_SAPLING)), ItemGroup.DECORATIONS);
     public static final Block PALE_MOSS_CARPET = registerBlock("pale_moss_carpet",
-            new CarpetBlock(FabricBlockSettings.of(Material.MOSS_BLOCK).sounds(BlockSoundGroup.MOSS_CARPET).nonOpaque().resistance(0.1f).hardness((0.1f))), ItemGroup.BUILDING_BLOCKS);
+            new CarpetBlock(FabricBlockSettings.of(Material.MOSS_BLOCK).sounds(BlockSoundGroup.MOSS_CARPET).nonOpaque().resistance(0.1f).hardness((0.1f))), ItemGroup.DECORATIONS);
     public static final Block PALE_MOSS_BLOCK = registerBlock("pale_moss_block",
             new PaleMossBlock(FabricBlockSettings.of(Material.MOSS_BLOCK).sounds(BlockSoundGroup.MOSS_BLOCK).nonOpaque().resistance(0.1f).hardness((0.1f))), ItemGroup.BUILDING_BLOCKS);
     public static final Block OPEN_EYEBLOSSOM = registerBlock("open_eyeblossom",
-            new FlowerBlock(StatusEffects.BLINDNESS, 5, FabricBlockSettings.of(Material.MOSS_BLOCK).sounds(BlockSoundGroup.CROP).noCollision().luminance(5)), ItemGroup.BUILDING_BLOCKS);
+            new FlowerBlock(StatusEffects.BLINDNESS, 5, FabricBlockSettings.of(Material.MOSS_BLOCK).sounds(BlockSoundGroup.CROP).noCollision().luminance(5)), ItemGroup.DECORATIONS);
     public static final Block CLOSED_EYEBLOSSOM = registerBlock("closed_eyeblossom",
-            new FlowerBlock(StatusEffects.NAUSEA, 5, FabricBlockSettings.of(Material.MOSS_BLOCK).sounds(BlockSoundGroup.CROP).noCollision()), ItemGroup.BUILDING_BLOCKS);
+            new FlowerBlock(StatusEffects.NAUSEA, 5, FabricBlockSettings.of(Material.MOSS_BLOCK).sounds(BlockSoundGroup.CROP).noCollision()), ItemGroup.DECORATIONS);
     public static final Block POTTED_OPEN_EYEBLOSSOM = registerBlock("potted_open_eyeblossom",
             new FlowerPotBlock(ModBlocks.OPEN_EYEBLOSSOM, FabricBlockSettings.copy(Blocks.POTTED_DANDELION)));
     public static final Block POTTED_CLOSED_EYEBLOSSOM = registerBlock("potted_closed_eyeblossom",
@@ -218,7 +224,7 @@ public class ModBlocks {
     public static final Block ACTIVE_CREAKING_HEART = registerBlock("active_creaking_heart",
             new PillarBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3).luminance(5)), ItemGroup.BUILDING_BLOCKS);
     public static final Block PALE_LANTERN = registerBlock("pale_lantern",
-            new LanternBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3).luminance(15).nonOpaque()), ItemGroup.BUILDING_BLOCKS);
+            new LanternBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3).luminance(15).nonOpaque()), ItemGroup.DECORATIONS);
     public static final Block PALE_HANGING_MOSS_PLANT = registerBlock("pale_hanging_moss_plant",
             new PaleHangingMossPlantBlock(AbstractBlock.Settings.of(Material.PLANT).noCollision().nonOpaque().sounds(BlockSoundGroup.AZALEA_LEAVES)));
     public static final Block PALE_HANGING_MOSS = registerBlock("pale_hanging_moss",
@@ -228,13 +234,13 @@ public class ModBlocks {
     public static final Block RESIN_BRICKS = registerBlock("resin_bricks",
             new Block(FabricBlockSettings.of(Material.STONE).sounds(BlockSoundGroup.DEEPSLATE_BRICKS).hardness(2).resistance(3)), ItemGroup.BUILDING_BLOCKS);
     public static final Block RESIN_CLUMP = registerBlock("resin_clump",
-            new GlowLichenBlock(FabricBlockSettings.of(Material.FROGSPAWN).sounds(BlockSoundGroup.STONE).hardness(0.1f).resistance(0.1f).noCollision().nonOpaque()), ItemGroup.BUILDING_BLOCKS);
+            new GlowLichenBlock(FabricBlockSettings.of(Material.FROGSPAWN).sounds(BlockSoundGroup.STONE).hardness(0.1f).resistance(0.1f).noCollision().nonOpaque()), ItemGroup.DECORATIONS);
 
 
     public static final Identifier PALE_OAK_SIGN_TEXTURE = new Identifier(NewInOldMain.MOD_ID, "entity/signs/pale_oak");
 
     public static final Block STANDING_PALE_OAK_SIGN = registerBlock("standing_pale_oak_sign",
-            new TerraformSignBlock(PALE_OAK_SIGN_TEXTURE, FabricBlockSettings.copyOf(Blocks.OAK_SIGN).hardness(0.5f).resistance(0.5f).noCollision()), ItemGroup.BUILDING_BLOCKS);
+            new TerraformSignBlock(PALE_OAK_SIGN_TEXTURE, FabricBlockSettings.copyOf(Blocks.OAK_SIGN).hardness(0.5f).resistance(0.5f).noCollision()), ItemGroup.DECORATIONS);
     public static final Block WALL_PALE_OAK_SIGN = registerBlock("wall_pale_oak_sign",
             new TerraformWallSignBlock(PALE_OAK_SIGN_TEXTURE, FabricBlockSettings.copyOf(Blocks.OAK_WALL_SIGN).hardness(0.5f).resistance(0.5f).noCollision()));
 
@@ -270,13 +276,13 @@ public class ModBlocks {
         NewInOldMain.LOGGER.debug("registering the ModdedBlocks for " + NewInOldMain.MOD_ID);
     }
     public static void registerOxidation() {
-         OxidizableBlocksRegistry.registerOxidizableBlockPair(COPPER_DOOR, EXPOSED_COPPER_DOOR);
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(EXPOSED_COPPER_DOOR, WEATHERED_COPPER_DOOR);
-         OxidizableBlocksRegistry.registerOxidizableBlockPair(WEATHERED_COPPER_DOOR, OXIDIZED_COPPER_DOOR);
+         OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.COPPER_DOOR, ModBlocks.EXPOSED_COPPER_DOOR);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.EXPOSED_COPPER_DOOR, ModBlocks.WEATHERED_COPPER_DOOR);
+         OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.WEATHERED_COPPER_DOOR, ModBlocks.OXIDIZED_COPPER_DOOR);
 
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(COPPER_TRAPDOOR, EXPOSED_COPPER_TRAPDOOR);
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(EXPOSED_COPPER_TRAPDOOR, WEATHERED_COPPER_TRAPDOOR);
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(WEATHERED_COPPER_TRAPDOOR, OXIDIZED_COPPER_TRAPDOOR);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.COPPER_TRAPDOOR, ModBlocks.EXPOSED_COPPER_TRAPDOOR);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.EXPOSED_COPPER_TRAPDOOR, ModBlocks.WEATHERED_COPPER_TRAPDOOR);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.WEATHERED_COPPER_TRAPDOOR, ModBlocks.OXIDIZED_COPPER_TRAPDOOR);
         NewInOldMain.LOGGER.debug("registering the OxidizableBlocks for " + NewInOldMain.MOD_ID);
            };
     public static void registerWaxing() {

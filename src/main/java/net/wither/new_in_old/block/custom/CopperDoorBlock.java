@@ -4,12 +4,16 @@ import net.minecraft.block.DoorBlock;
 import net.minecraft.block.Oxidizable;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.enums.DoubleBlockHalf;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 
 public class CopperDoorBlock extends DoorBlock implements Oxidizable {
@@ -23,6 +27,14 @@ public class CopperDoorBlock extends DoorBlock implements Oxidizable {
     @Override
     public OxidationLevel getDegradationLevel() {
         return this.oxidationLevel;
+    }
+
+    @SuppressWarnings("deprecation")
+    public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+        this.tickDegradation(state, world, pos, random);
+    }
+    public boolean hasRandomTicks(BlockState state) {
+        return Oxidizable.getIncreasedOxidationBlock(state.getBlock()).isPresent();
     }
 
     @Override
@@ -45,5 +57,40 @@ public class CopperDoorBlock extends DoorBlock implements Oxidizable {
         }
         return super.onUse(state, world, pos, player, hand, hit);
     }
+    @Override
+    @SuppressWarnings("deprecation")
+    public void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
+        if (!state.isOf(newState.getBlock()) && newState.getBlock() instanceof CopperDoorBlock) {
+            replaceDoorWithOxidized(world, pos, newState);
+        }
+        super.onStateReplaced(state, world, pos, newState, moved);
+    }
 
+
+    public static void replaceDoorWithOxidized(World world, BlockPos pos, BlockState newState) {
+        BlockState oldState = world.getBlockState(pos);
+
+        if (!(oldState.getBlock() instanceof DoorBlock)) {
+            return;
+        }
+
+        boolean isUpperHalf = oldState.get(DoorBlock.HALF) == DoubleBlockHalf.UPPER;
+        BlockPos otherHalfPos = isUpperHalf ? pos.down() : pos.up();
+        BlockState otherHalfState = world.getBlockState(otherHalfPos);
+
+        if (!(otherHalfState.getBlock() instanceof DoorBlock)) {
+            return;
+        }
+
+        BlockState newUpper = newState
+                .with(DoorBlock.HALF, DoubleBlockHalf.UPPER)
+                .with(DoorBlock.FACING, oldState.get(DoorBlock.FACING))
+                .with(DoorBlock.OPEN, oldState.get(DoorBlock.OPEN))
+                .with(DoorBlock.HINGE, oldState.get(DoorBlock.HINGE));
+
+        BlockState newLower = newUpper.with(DoorBlock.HALF, DoubleBlockHalf.LOWER);
+
+        world.setBlockState(pos, isUpperHalf ? newUpper : newLower, 3);
+        world.setBlockState(otherHalfPos, isUpperHalf ? newLower : newUpper, 3);
+    }
 }
