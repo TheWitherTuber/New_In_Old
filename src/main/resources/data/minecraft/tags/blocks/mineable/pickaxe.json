@@ -25,6 +25,24 @@
     "new_in_old:waxed_weathered_copper_trapdoor",
     "new_in_old:weathered_copper_trapdoor",
     "new_in_old:exposed_copper_trapdoor",
-    "new_in_old:oxidized_copper_trapdoor"
+    "new_in_old:oxidized_copper_trapdoor",
+
+    "new_in_old:copper_bulb",
+    "new_in_old:waxed_copper_bulb",
+    "new_in_old:waxed_exposed_copper_bulb",
+    "new_in_old:waxed_oxidized_copper_bulb",
+    "new_in_old:waxed_weathered_copper_bulb",
+    "new_in_old:weathered_copper_bulb",
+    "new_in_old:exposed_copper_bulb",
+    "new_in_old:oxidized_copper_bulb",
+
+    "new_in_old:copper_grate",
+    "new_in_old:waxed_copper_grate",
+    "new_in_old:waxed_exposed_copper_grate",
+    "new_in_old:waxed_oxidized_copper_grate",
+    "new_in_old:waxed_weathered_copper_grate",
+    "new_in_old:weathered_copper_grate",
+    "new_in_old:exposed_copper_grate",
+    "new_in_old:oxidized_copper_grate"
   ]
 }

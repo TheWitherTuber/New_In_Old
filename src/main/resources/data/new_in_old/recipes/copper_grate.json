@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "grate",
+  "key": {
+    "C": {
+      "item": "minecraft:copper_block"
+    }
+  },
+  "pattern": [
+    " C ",
+    "C C",
+    " C "
+  ],
+  "result": {
+    "item": "new_in_old:copper_grate"
+  }
+}

@@ -145,21 +145,38 @@ public class ModBlocks {
             new CopperTrapdoorBlock(Oxidizable.OxidationLevel.OXIDIZED, AbstractBlock.Settings.copy(Blocks.IRON_TRAPDOOR).nonOpaque()), ItemGroup.REDSTONE);
 
     public static final Block COPPER_BULB = registerBlock("copper_bulb",
-            new OxidizableBlock(Oxidizable.OxidationLevel.UNAFFECTED, FabricBlockSettings.copy(Blocks.IRON_BLOCK)), ItemGroup.REDSTONE);
+            new CopperBulbBlock(Oxidizable.OxidationLevel.UNAFFECTED, FabricBlockSettings.copy(Blocks.IRON_BLOCK)), ItemGroup.REDSTONE);
     public static final Block EXPOSED_COPPER_BULB = registerBlock("exposed_copper_bulb",
-            new OxidizableBlock(Oxidizable.OxidationLevel.EXPOSED, FabricBlockSettings.copy(Blocks.IRON_BLOCK)), ItemGroup.REDSTONE);
+            new CopperBulbBlock(Oxidizable.OxidationLevel.EXPOSED, FabricBlockSettings.copy(Blocks.IRON_BLOCK)), ItemGroup.REDSTONE);
     public static final Block WEATHERED_COPPER_BULB = registerBlock("weathered_copper_bulb",
-            new OxidizableBlock(Oxidizable.OxidationLevel.WEATHERED, FabricBlockSettings.copy(Blocks.IRON_BLOCK)), ItemGroup.REDSTONE);
+            new CopperBulbBlock(Oxidizable.OxidationLevel.WEATHERED, FabricBlockSettings.copy(Blocks.IRON_BLOCK)), ItemGroup.REDSTONE);
     public static final Block OXIDIZED_COPPER_BULB = registerBlock("oxidized_copper_bulb",
-            new OxidizableBlock(Oxidizable.OxidationLevel.OXIDIZED, FabricBlockSettings.copy(Blocks.IRON_BLOCK)), ItemGroup.REDSTONE);
+            new CopperBulbBlock(Oxidizable.OxidationLevel.OXIDIZED, FabricBlockSettings.copy(Blocks.IRON_BLOCK)), ItemGroup.REDSTONE);
     public static final Block WAXED_COPPER_BULB = registerBlock("waxed_copper_bulb",
-            new OxidizableBlock(Oxidizable.OxidationLevel.UNAFFECTED, FabricBlockSettings.copy(Blocks.IRON_BLOCK)), ItemGroup.REDSTONE);
+            new CopperBulbBlock(Oxidizable.OxidationLevel.UNAFFECTED, FabricBlockSettings.copy(Blocks.IRON_BLOCK)), ItemGroup.REDSTONE);
     public static final Block WAXED_EXPOSED_COPPER_BULB = registerBlock("waxed_exposed_copper_bulb",
-            new OxidizableBlock(Oxidizable.OxidationLevel.EXPOSED, FabricBlockSettings.copy(Blocks.IRON_BLOCK)), ItemGroup.REDSTONE);
+            new CopperBulbBlock(Oxidizable.OxidationLevel.EXPOSED, FabricBlockSettings.copy(Blocks.IRON_BLOCK)), ItemGroup.REDSTONE);
     public static final Block WAXED_WEATHERED_COPPER_BULB = registerBlock("waxed_weathered_copper_bulb",
-            new OxidizableBlock(Oxidizable.OxidationLevel.WEATHERED, FabricBlockSettings.copy(Blocks.IRON_BLOCK)), ItemGroup.REDSTONE);
+            new CopperBulbBlock(Oxidizable.OxidationLevel.WEATHERED, FabricBlockSettings.copy(Blocks.IRON_BLOCK)), ItemGroup.REDSTONE);
     public static final Block WAXED_OXIDIZED_COPPER_BULB = registerBlock("waxed_oxidized_copper_bulb",
-            new OxidizableBlock(Oxidizable.OxidationLevel.OXIDIZED, FabricBlockSettings.copy(Blocks.IRON_BLOCK)), ItemGroup.REDSTONE);
+            new CopperBulbBlock(Oxidizable.OxidationLevel.OXIDIZED, FabricBlockSettings.copy(Blocks.IRON_BLOCK)), ItemGroup.REDSTONE);
+
+    public static final Block COPPER_GRATE = registerBlock("copper_grate",
+            new CopperGrateBlock(Oxidizable.OxidationLevel.UNAFFECTED, FabricBlockSettings.copy(Blocks.CHAIN).nonOpaque()), ItemGroup.BUILDING_BLOCKS);
+    public static final Block EXPOSED_COPPER_GRATE = registerBlock("exposed_copper_grate",
+            new CopperGrateBlock(Oxidizable.OxidationLevel.EXPOSED, FabricBlockSettings.copy(Blocks.CHAIN).nonOpaque()), ItemGroup.BUILDING_BLOCKS);
+    public static final Block WEATHERED_COPPER_GRATE = registerBlock("weathered_copper_grate",
+            new CopperGrateBlock(Oxidizable.OxidationLevel.WEATHERED, FabricBlockSettings.copy(Blocks.CHAIN).nonOpaque()), ItemGroup.BUILDING_BLOCKS);
+    public static final Block OXIDIZED_COPPER_GRATE = registerBlock("oxidized_copper_grate",
+            new CopperGrateBlock(Oxidizable.OxidationLevel.OXIDIZED, FabricBlockSettings.copy(Blocks.CHAIN).nonOpaque()), ItemGroup.BUILDING_BLOCKS);
+    public static final Block WAXED_COPPER_GRATE = registerBlock("waxed_copper_grate",
+            new CopperGrateBlock(Oxidizable.OxidationLevel.UNAFFECTED, FabricBlockSettings.copy(Blocks.CHAIN).nonOpaque()), ItemGroup.BUILDING_BLOCKS);
+    public static final Block WAXED_EXPOSED_COPPER_GRATE = registerBlock("waxed_exposed_copper_grate",
+            new CopperGrateBlock(Oxidizable.OxidationLevel.EXPOSED, FabricBlockSettings.copy(Blocks.CHAIN).nonOpaque()), ItemGroup.BUILDING_BLOCKS);
+    public static final Block WAXED_WEATHERED_COPPER_GRATE = registerBlock("waxed_weathered_copper_grate",
+            new CopperGrateBlock(Oxidizable.OxidationLevel.WEATHERED, FabricBlockSettings.copy(Blocks.CHAIN).nonOpaque()), ItemGroup.BUILDING_BLOCKS);
+    public static final Block WAXED_OXIDIZED_COPPER_GRATE = registerBlock("waxed_oxidized_copper_grate",
+            new CopperGrateBlock(Oxidizable.OxidationLevel.OXIDIZED, FabricBlockSettings.copy(Blocks.CHAIN).nonOpaque()), ItemGroup.BUILDING_BLOCKS);
 
     //Custom Blocks//
 
@@ -307,6 +324,10 @@ public class ModBlocks {
         OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.COPPER_BULB, ModBlocks.EXPOSED_COPPER_BULB);
         OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.EXPOSED_COPPER_BULB, ModBlocks.WEATHERED_COPPER_BULB);
         OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.WEATHERED_COPPER_BULB, ModBlocks.OXIDIZED_COPPER_BULB);
+
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.COPPER_GRATE, ModBlocks.EXPOSED_COPPER_GRATE);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.EXPOSED_COPPER_GRATE, ModBlocks.WEATHERED_COPPER_GRATE);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.WEATHERED_COPPER_GRATE, ModBlocks.OXIDIZED_COPPER_GRATE);
         NewInOldMain.LOGGER.debug("registering the OxidizableBlocks for " + NewInOldMain.MOD_ID);
            };
     public static void registerWaxing() {
@@ -324,6 +345,11 @@ public class ModBlocks {
         OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.EXPOSED_COPPER_BULB, ModBlocks.WAXED_EXPOSED_COPPER_BULB);
         OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.WEATHERED_COPPER_BULB, ModBlocks.WAXED_WEATHERED_COPPER_BULB);
         OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.OXIDIZED_COPPER_BULB, ModBlocks.WAXED_OXIDIZED_COPPER_BULB);
+
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.COPPER_GRATE, ModBlocks.WAXED_COPPER_GRATE);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.EXPOSED_COPPER_GRATE, ModBlocks.WAXED_EXPOSED_COPPER_GRATE);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.WEATHERED_COPPER_GRATE, ModBlocks.WAXED_WEATHERED_COPPER_GRATE);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.OXIDIZED_COPPER_GRATE, ModBlocks.WAXED_OXIDIZED_COPPER_GRATE);
 
      NewInOldMain.LOGGER.debug("registering the WaxAbleBlocks for " + NewInOldMain.MOD_ID);
      }
