@@ -206,6 +206,28 @@ public class ModBlocks {
             new SlabBlock(FabricBlockSettings.copy(Blocks.COARSE_DIRT)), ItemGroup.BUILDING_BLOCKS);
     public static final Block GRASS_SLAB = registerBlock("grass_slab",
             new SlabBlock(FabricBlockSettings.copy(Blocks.GRASS_BLOCK)), ItemGroup.BUILDING_BLOCKS);
+  //borads
+    public static final Block acacia_boards = registerBlock("acacia_boards",
+            new SlabBlock(FabricBlockSettings.copy(Blocks.ACACIA_PLANKS)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block bamboo_boards = registerBlock("bamboo_boards",
+            new SlabBlock(FabricBlockSettings.copy(Blocks.OAK_PLANKS)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block birch_board = registerBlock("birch_board",
+            new SlabBlock(FabricBlockSettings.copy(Blocks.BIRCH_PLANKS)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block cherry_board = registerBlock("cherry_board",
+            new SlabBlock(FabricBlockSettings.copy(Blocks.OAK_PLANKS)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block crimson_boards = registerBlock("crimson_boards",
+            new SlabBlock(FabricBlockSettings.copy(Blocks.BIRCH_PLANKS)), ItemGroup.BUILDING_BLOCKS);
+public static final Block dark_oak_boards = registerBlock("dark_oak_boards",
+            new SlabBlock(FabricBlockSettings.copy(Blocks.DARK_OAK_PLANKS)), ItemGroup.BUILDING_BLOCKS);
+public static final Block jungle_boards = registerBlock("jungle_boards",
+        new SlabBlock(FabricBlockSettings.copy(Blocks.JUNGLE_PLANKS)), ItemGroup.BUILDING_BLOCKS);
+public static final Block mangrove_boards = registerBlock("mangrove_boards",
+        new SlabBlock(FabricBlockSettings.copy(Blocks.MANGROVE_PLANKS)), ItemGroup.BUILDING_BLOCKS);
+public static final Block oak_boards = registerBlock("oak_boards",
+        new SlabBlock(FabricBlockSettings.copy(Blocks.OAK_PLANKS)), ItemGroup.BUILDING_BLOCKS);
+public static final Block warped_boards = registerBlock("warped_boards",
+        new SlabBlock(FabricBlockSettings.copy(Blocks.WARPED_PLANKS)), ItemGroup.BUILDING_BLOCKS);
+
 
 
 
