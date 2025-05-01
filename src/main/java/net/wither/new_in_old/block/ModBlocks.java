@@ -195,9 +195,9 @@ public class ModBlocks {
             new SlabBlock(FabricBlockSettings.copy(Blocks.ACACIA_PLANKS)), ItemGroup.BUILDING_BLOCKS);
     public static final Block bamboo_boards = registerBlock("bamboo_boards",
             new SlabBlock(FabricBlockSettings.copy(Blocks.OAK_PLANKS)), ItemGroup.BUILDING_BLOCKS);
-    public static final Block birch_boards = registerBlock("birch_board",
+    public static final Block birch_boards = registerBlock("birch_boards",
             new SlabBlock(FabricBlockSettings.copy(Blocks.BIRCH_PLANKS)), ItemGroup.BUILDING_BLOCKS);
-    public static final Block cherry_boards = registerBlock("cherry_board",
+    public static final Block cherry_boards = registerBlock("cherry_boards",
             new SlabBlock(FabricBlockSettings.copy(Blocks.OAK_PLANKS)), ItemGroup.BUILDING_BLOCKS);
     public static final Block crimson_boards = registerBlock("crimson_boards",
             new SlabBlock(FabricBlockSettings.copy(Blocks.BIRCH_PLANKS)), ItemGroup.BUILDING_BLOCKS);
