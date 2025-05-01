@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:block/slab",
+  "parent": "minecraft:block/slab_top",
   "textures": {
     "bottom": "new_in_old:block/acacia_boards",
     "side": "new_in_old:block/acacia_boards",

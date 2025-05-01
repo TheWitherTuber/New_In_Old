@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "new_in_old:block/acacia_boards"
+    },
+    "type=double": {
+      "model": "new_in_old:block/acacia_boards_full"
+    },
+    "type=top": {
+      "model": "new_in_old:block/acacia_boards_top"
+    }
+  }
+}

@@ -110,22 +110,6 @@ public class ModBlocks {
             .group("wooden").unlockCriterionName("has_planks").build();
 
     //Trial Update//
-    public static final Block COPPER_DOOR = registerBlock("copper_door",
-            new CopperDoorBlock(Oxidizable.OxidationLevel.UNAFFECTED, AbstractBlock.Settings.copy(Blocks.IRON_DOOR).nonOpaque()), ItemGroup.REDSTONE);
-    public static final Block EXPOSED_COPPER_DOOR = registerBlock("exposed_copper_door",
-            new CopperDoorBlock(Oxidizable.OxidationLevel.EXPOSED, AbstractBlock.Settings.copy(Blocks.IRON_DOOR).nonOpaque()), ItemGroup.REDSTONE);
-    public static final Block WEATHERED_COPPER_DOOR = registerBlock("weathered_copper_door",
-            new CopperDoorBlock(Oxidizable.OxidationLevel.WEATHERED, AbstractBlock.Settings.copy(Blocks.IRON_DOOR).nonOpaque()), ItemGroup.REDSTONE);
-    public static final Block OXIDIZED_COPPER_DOOR = registerBlock("oxidized_copper_door",
-            new CopperDoorBlock(Oxidizable.OxidationLevel.OXIDIZED, AbstractBlock.Settings.copy(Blocks.IRON_DOOR).nonOpaque()), ItemGroup.REDSTONE);
-    public static final Block WAXED_COPPER_DOOR = registerBlock("waxed_copper_door",
-            new CopperDoorBlock(Oxidizable.OxidationLevel.UNAFFECTED, AbstractBlock.Settings.copy(Blocks.IRON_DOOR).nonOpaque()), ItemGroup.REDSTONE);
-    public static final Block WAXED_EXPOSED_COPPER_DOOR = registerBlock("waxed_exposed_copper_door",
-            new CopperDoorBlock(Oxidizable.OxidationLevel.EXPOSED, AbstractBlock.Settings.copy(Blocks.IRON_DOOR).nonOpaque()), ItemGroup.REDSTONE);
-    public static final Block WAXED_WEATHERED_COPPER_DOOR = registerBlock("waxed_weathered_copper_door",
-            new CopperDoorBlock(Oxidizable.OxidationLevel.WEATHERED, AbstractBlock.Settings.copy(Blocks.IRON_DOOR).nonOpaque()), ItemGroup.REDSTONE);
-    public static final Block WAXED_OXIDIZED_COPPER_DOOR = registerBlock("waxed_oxidized_copper_door",
-            new CopperDoorBlock(Oxidizable.OxidationLevel.OXIDIZED, AbstractBlock.Settings.copy(Blocks.IRON_DOOR).nonOpaque()), ItemGroup.REDSTONE);
 
     public static final Block COPPER_TRAPDOOR = registerBlock("copper_trapdoor",
             new CopperTrapdoorBlock(Oxidizable.OxidationLevel.UNAFFECTED, AbstractBlock.Settings.copy(Blocks.IRON_TRAPDOOR).nonOpaque()), ItemGroup.REDSTONE);
@@ -211,9 +195,9 @@ public class ModBlocks {
             new SlabBlock(FabricBlockSettings.copy(Blocks.ACACIA_PLANKS)), ItemGroup.BUILDING_BLOCKS);
     public static final Block bamboo_boards = registerBlock("bamboo_boards",
             new SlabBlock(FabricBlockSettings.copy(Blocks.OAK_PLANKS)), ItemGroup.BUILDING_BLOCKS);
-    public static final Block birch_board = registerBlock("birch_board",
+    public static final Block birch_boards = registerBlock("birch_board",
             new SlabBlock(FabricBlockSettings.copy(Blocks.BIRCH_PLANKS)), ItemGroup.BUILDING_BLOCKS);
-    public static final Block cherry_board = registerBlock("cherry_board",
+    public static final Block cherry_boards = registerBlock("cherry_board",
             new SlabBlock(FabricBlockSettings.copy(Blocks.OAK_PLANKS)), ItemGroup.BUILDING_BLOCKS);
     public static final Block crimson_boards = registerBlock("crimson_boards",
             new SlabBlock(FabricBlockSettings.copy(Blocks.BIRCH_PLANKS)), ItemGroup.BUILDING_BLOCKS);
@@ -227,6 +211,20 @@ public static final Block oak_boards = registerBlock("oak_boards",
         new SlabBlock(FabricBlockSettings.copy(Blocks.OAK_PLANKS)), ItemGroup.BUILDING_BLOCKS);
 public static final Block warped_boards = registerBlock("warped_boards",
         new SlabBlock(FabricBlockSettings.copy(Blocks.WARPED_PLANKS)), ItemGroup.BUILDING_BLOCKS);
+
+    public static final Block OAK_LANTERN = registerBlock("oak_lantern",
+            new LanternBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3).luminance(15).nonOpaque()), ItemGroup.DECORATIONS);
+    public static final Block ACACIA_LANTERN = registerBlock("acacia_lantern",
+            new LanternBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3).luminance(15).nonOpaque()), ItemGroup.DECORATIONS);
+    public static final Block BIRCH_LANTERN = registerBlock("birch_lantern",
+            new LanternBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3).luminance(15).nonOpaque()), ItemGroup.DECORATIONS);
+    public static final Block DARK_OAK_LANTERN = registerBlock("dark_oak_lantern",
+            new LanternBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3).luminance(15).nonOpaque()), ItemGroup.DECORATIONS);
+    public static final Block JUNGLE_LANTERN = registerBlock("jungle_lantern",
+            new LanternBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3).luminance(15).nonOpaque()), ItemGroup.DECORATIONS);
+    public static final Block SPRUCE_LANTERN = registerBlock("spruce_lantern",
+            new LanternBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).hardness(2).resistance(3).luminance(15).nonOpaque()), ItemGroup.DECORATIONS);
+
 
 
 
@@ -335,9 +333,6 @@ public static final Block warped_boards = registerBlock("warped_boards",
         NewInOldMain.LOGGER.debug("registering the ModdedBlocks for " + NewInOldMain.MOD_ID);
     }
     public static void registerOxidation() {
-         OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.COPPER_DOOR, ModBlocks.EXPOSED_COPPER_DOOR);
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.EXPOSED_COPPER_DOOR, ModBlocks.WEATHERED_COPPER_DOOR);
-         OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.WEATHERED_COPPER_DOOR, ModBlocks.OXIDIZED_COPPER_DOOR);
 
         OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.COPPER_TRAPDOOR, ModBlocks.EXPOSED_COPPER_TRAPDOOR);
         OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.EXPOSED_COPPER_TRAPDOOR, ModBlocks.WEATHERED_COPPER_TRAPDOOR);
@@ -353,10 +348,6 @@ public static final Block warped_boards = registerBlock("warped_boards",
         NewInOldMain.LOGGER.debug("registering the OxidizableBlocks for " + NewInOldMain.MOD_ID);
            };
     public static void registerWaxing() {
-        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.COPPER_DOOR, ModBlocks.WAXED_COPPER_DOOR);
-        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.EXPOSED_COPPER_DOOR, ModBlocks.WAXED_EXPOSED_COPPER_DOOR);
-        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.WEATHERED_COPPER_DOOR, ModBlocks.WAXED_WEATHERED_COPPER_DOOR);
-        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.OXIDIZED_COPPER_DOOR, ModBlocks.WAXED_OXIDIZED_COPPER_DOOR);
 
         OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.COPPER_TRAPDOOR, ModBlocks.WAXED_COPPER_TRAPDOOR);
         OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.EXPOSED_COPPER_TRAPDOOR, ModBlocks.WAXED_EXPOSED_COPPER_TRAPDOOR);

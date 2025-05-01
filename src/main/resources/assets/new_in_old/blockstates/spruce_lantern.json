@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "new_in_old:block/spruce_lantern"
+    },
+    "hanging=true": {
+      "model": "new_in_old:block/spruce_lantern_hanging"
+    }
+  }
+}

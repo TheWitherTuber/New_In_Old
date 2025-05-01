@@ -125,6 +125,12 @@
   "item.new_in_old.music_disc_creator_music_box": "Music Disc",
   "item.new_in_old.music_disc_creator_music_box.desc": "Lena Raine - Creator (Music Box)",
   "item.new_in_old.music_disc_precipice": "Music Disc",
-  "item.new_in_old.music_disc_precipice.desc": "Aaron Cherof - Precipice"
+  "item.new_in_old.music_disc_precipice.desc": "Aaron Cherof - Precipice",
 
+  "block.new_in_old.oak_lantern": "Oak Lantern",
+  "block.new_in_old.dark_oak_lantern": "Dark Oak Lantern",
+  "block.new_in_old.birch_lantern": "Birch Lantern",
+  "block.new_in_old.jungle_lantern": "Jungle Lantern",
+  "block.new_in_old.acacia_lantern": "Acacia Lantern",
+  "block.new_in_old.spruce_lantern": "Spruce Lantern"
 }
